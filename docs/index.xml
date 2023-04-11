@@ -288,7 +288,7 @@ num_shared_session [=1]
 복호화가 성공하면 dst에는 원본 데이터가 들어가고 dst_len에는 원본 데이터의 길이가 들어가게 됩니다.&lt;/p>
 &lt;p>하지만 PcAPI_decrypt_name 실행 후에 dst 버퍼에서 원본 데이터 끝에 마지막 값이 없기 때문에 dst에서 dst_len 길이 만큼 잘라서 사용하거나 dst 버퍼를 바로 사용하려면 &lt;code>dst[dst_len] ='\0'&lt;/code> 형태로 데이터의 마지막을 표현해주어야 합니다.&lt;/p>
 &lt;h3 id="return-value">RETURN VALUE&lt;/h3>
-&lt;p>T성공 시 0을 반환합니다.&lt;/p>
+&lt;p>성공 시 0을 반환합니다.&lt;/p>
 &lt;p>오류가 발생하면 0 보다 작은 &lt;a href="../../../error-codes">에러 코드&lt;/a>를 반환합니다.&lt;/p>
 &lt;h3 id="errors">ERRORS&lt;/h3>
 &lt;p>&lt;a href="../../../error-codes/#-30101">-30101&lt;/a>, &lt;a href="../../../error-codes/#-30103">-30103&lt;/a>, &lt;a href="../../../error-codes/#-30105">-30105&lt;/a>, &lt;a href="../../../error-codes/#-30106">-30106&lt;/a>, &lt;a href="../../../error-codes/#-30107">-30107&lt;/a>, &lt;a href="../../../error-codes/#-30108">-30108&lt;/a>, &lt;a href="../../../error-codes/#-30111">-30111&lt;/a>, &lt;a href="../../../error-codes/#-30116">-30116&lt;/a>, &lt;a href="../../../error-codes/#-30117">-30117&lt;/a>, &lt;a href="../../../error-codes/#-30118">-30118&lt;/a>, &lt;a href="../../../error-codes/#-30302">-30302&lt;/a>, &lt;a href="../../../error-codes/#-30351">-30351&lt;/a>, &lt;a href="../../../error-codes/#-30388">-30388&lt;/a>, &lt;a href="../../../error-codes/#-30401">-30401&lt;/a>&lt;/p></description></item></channel></rss>
