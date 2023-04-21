@@ -1,0 +1,200 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Petra Cipher Docs – Installation</title><link>https://sinsiway-official.github.io/docs/java/get-started/installation/</link><description>Recent content in Installation on Petra Cipher Docs</description><generator>Hugo -- gohugo.io</generator><language>ko-KR</language><lastBuildDate>Fri, 21 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sinsiway-official.github.io/docs/java/get-started/installation/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Linux</title><link>https://sinsiway-official.github.io/docs/java/get-started/installation/linux/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/java/get-started/installation/linux/</guid><description>
+&lt;h2 id="시스템-요구사항">시스템 요구사항&lt;/h2>
+&lt;h3 id="운영체제">운영체제&lt;/h3>
+&lt;p>본 프로그램은 Linux 64Bit 계열의 운영체제에서 동작합니다.&lt;/p>
+&lt;h3 id="커널-버전">커널 버전&lt;/h3>
+&lt;p>본 프로그램을 실행하기 위해서는 Linux 계열의 운영체제에서 사용되는 커널 버전 2.6.32 이상이 요구됩니다.&lt;/p>
+&lt;h3 id="컴파일러">컴파일러&lt;/h3>
+&lt;p>본 프로그램을 컴파일하기 위해서는 GCC 컴파일러 4.4.7 이상과 java8 (jdk1.8) 이상에서 동작합니다.&lt;/p>
+&lt;h2 id="다운로드-및-설치">다운로드 및 설치&lt;/h2>
+&lt;p>본 프로그램을 사용하기 위해서는 libpjcapi.so 라이브러리 파일과 PcaException.java, PcaSessionPool.java, PcaSession.java 파일을 다운로드합니다.&lt;/p>
+&lt;h3 id="아카이브-파일-설치">아카이브 파일 설치&lt;/h3>
+&lt;p>PcaException.java, PcaSessionPool.java, PcaSession.java 파일은 sinsiway 패키지로 사용됩니다. 파일을 모두 sinsiway 디렉토리로 이동 후 javac 컴파일하여 PetraCipherAPI.jar 아카이브 파일로 생성해야 합니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ tree sinsiway/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sinsiway/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|-- PcaException.java
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|-- PcaSession.java
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f1fa8c">`&lt;/span>-- PcaSessionPool.java
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ javac -Xlint:unchecked sinsiway/*.java
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ jar -cvf0 PetraCipherAPI.jar ./sinsiway/*.class
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="라이브러리-설치">라이브러리 설치&lt;/h3>
+&lt;p>라이브러리는 시스템 라이브러리 경로와 커스텀 라이브러리 두 가지 경로로 설치 가능합니다. 일반적으로 커스텀 라이브러리 경로를 사용해 설치합니다.&lt;/p>
+&lt;h4 id="시스템-라이브러리-경로에-설치하는-방법">시스템 라이브러리 경로에 설치하는 방법&lt;/h4>
+&lt;p>libpcapi.so 파일을 /usr/lib64 디렉토리에 설치하여 시스템 전역에서 사용할 수 있도록 할 수 있습니다. 이 방법은 다음과 같이 진행됩니다.&lt;/p>
+&lt;p>root 권한으로 터미널을 열고, libpcjapi.so 파일을 다운로드합니다.&lt;/p>
+&lt;p>다운로드한 파일과 생성한 아카이브 파일을 /lib 또는 /lib64 디렉토리에 복사합니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ sudo cp libpjcapi.so /usr/lib64
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ sudo cp PetraCipherAPI.jar /usr/lib64
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>파일의 권한을 변경합니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ sudo chmod &lt;span style="color:#bd93f9">755&lt;/span> /usr/lib64/libpjcapi.so
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ sudo chmod &lt;span style="color:#bd93f9">755&lt;/span> /usr/lib64/PetraCipherAPI.jar
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="커스텀-라이브러리-경로에-설치하는-방법">커스텀 라이브러리 경로에 설치하는 방법&lt;/h4>
+&lt;p>libpcjapi.so 과 PetraCipherAPI.jar파일을 사용하는 애플리케이션의 실행 환경에 따라 커스텀 라이브러리 경로에 설치하여 사용할 수도 있습니다. 이 방법은 다음과 같이 진행됩니다.&lt;/p>
+&lt;p>애플리케이션 실행 파일이 위치한 디렉토리에 libpcjapi.so, PetraCipherAPI.jar 파일을 복사합니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ cp libpcjapi.so /usr/local/lib64
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ cp PetraCipherAPI.jar /usr/local/lib64
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>LD_LIBRARY_PATH 환경 변수에 라이브러리 파일이 있는 경로를 등록합니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ &lt;span style="color:#8be9fd;font-style:italic">export&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">LD_LIBRARY_PATH&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>/usr/local/lib64
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="컴파일">컴파일&lt;/h2>
+&lt;p>PetraCipherAPI.jar 아카이브 파일을 사용하는 컴파일하기 위해서는 클래스패스 옵션을 사용하여 아카이브 파일을 지정해줘야 합니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ javac -cp ./lib64/PetraCipherAPI.jar program.java
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>위 명령어에서 -cp 옵션은 환경변수 CLASSPATH 역할을 옵션으로 지정하며, program.java는 컴파일할 소스 코드 파일 이름을 의미합니다.&lt;/p>
+&lt;h3 id="프로그램-실행">프로그램 실행&lt;/h3>
+&lt;p>program 실행 파일을 생성하고 실행합니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>java ./program
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>위 명령어를 실행하면 program 프로그램이 실행됩니다.
+단, 프로그램에서 암복호화 함수 호출을 위해 반드시 서버에 구성 파일을 작성해두어야 합니다. 구성 파일의 설정 방법은 아래와 같습니다.&lt;/p>
+&lt;h2 id="구성-파일-설정">구성 파일 설정&lt;/h2>
+&lt;p>본 프로그램을 실행하기 위해선 페트라 싸이퍼 키 서버 정보가 저장 된 구성 파일을 필요로합니다.
+구성 파일은 소스코드 내부에서 초기화 함수로 특별히 지정하지 않으면 “/var/tmp/.petra/petra_cipher_api.conf” 기본 경로를 사용합니다.&lt;/p>
+&lt;h3 id="자격-증명-값-생성">자격 증명 값 생성&lt;/h3>
+&lt;p>구성 파일 작성을 위해 우선 키 서버에서 자격 증명 값을 생성해야 합니다. 자격 증명 값은 키 서버에서 pcp_credentials 바이너리를 통해 생성할 수 있습니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ pcp_credentials generate -svc demo -user dgadmin -password abc -&lt;span style="color:#ff79c6">[&lt;/span>key|svc_home&lt;span style="color:#ff79c6">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="옵션">옵션&lt;/h4>
+&lt;h5 id="-svc-soha_svc">-svc SOHA_SVC&lt;/h5>
+&lt;p>SOHA_SVC는 페트라 싸이퍼 인 메모리 데이터베이스 SOHA DBMS의 서비스 이름입니다. 페트라 싸이퍼 설치 계정에서 env | grep SOHA_SVC 를 통해 값을 확인할 수 있습니다.&lt;/p>
+&lt;h5 id="-user-soha_user">-user soha_user&lt;/h5>
+&lt;p>SOHA DBMS의 접속 계정입니다. 기본값으로 dgadmin을 사용합니다.&lt;/p>
+&lt;h5 id="-password-soha_password">-password soha_password&lt;/h5>
+&lt;p>SOHA DBMS 계정의 비밀번호입니다. 기본값으로 petra@one1을 사용합니다.&lt;/p>
+&lt;h5 id="-key-credentials_password-선택">-key [=credentials_password] (선택)&lt;/h5>
+&lt;p>생성하려는 자격 증명 값에 대한 비밀번호입니다. 만약 자격 증명 값을 생성할 때 비밀번호를 사용하면 라이브러리를 사용하는 프로그램에서 반드시 초기화 함수를 사용해 자격 증명 값 비밀번호를 입력해야 합니다. 선택할 수 있는 값으로 사용하지 않으면 비밀번호를 사용하지 않습니다.&lt;/p>
+&lt;h5 id="-soha_home-soha_home-선택">-soha_home [=SOHA_HOME] (선택)&lt;/h5>
+&lt;p>로컬 키 서버를 사용하기 위해 설정할 수 있는 SOHA DBMS의 설치 경로입니다. 페트라 싸이퍼 설치 계정에서 env | grep SOHA_HOME 으로 확인할 수 있습니다. 응용 프로그램과 같은 서버에 설치 된 키 서버에 프로세스 파이프 통신을 통해 보다 빠른 속도로 키 데이터를 얻어오는 구성을 사용할 때 선택할 수 있는 값입니다. 옵션을 사용하기 위해 구성 파일에서 키 서버 호스트 값을 &amp;ldquo;LOCAL&amp;quot;로 설정해야 합니다.&lt;/p>
+&lt;p>다음과 같이 생성할 수 있습니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ env | grep SOHA_SVC
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">SOHA_SVC&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>keysvr
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ pcp_credentials generate -svc keysvr -user dgadmin -password petra@one1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">credentials&lt;/span> &lt;span style="color:#ff79c6">=&lt;/span>&amp;gt; Y8UdAzNpEDbO8bvMK5ez2W+buNUO8dShCJYgGO84B6y/waMSyTL/RdXzU1d39Pd0PfhNQZEw4LRHKJm5ySPN0kz+DGu/IGKAWbepbG9EgycA&lt;span style="color:#ff79c6">=&lt;/span>AYQA
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="구성파일-생성">구성파일 생성&lt;/h3>
+&lt;p>구성 파일을 다음과 같이 작성할 수 있습니다. 먼저 vi를 통해 기본 경로인 “/var/tmp/.petra/petra_cipher_api.conf” 파일을 열어줍니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vi /var/tmp/.petra/petra_cipher_api.conf
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>다음과 같이 키 서버 정보를 입력합니다.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>keysvr.primary.host &lt;span style="color:#ff79c6">=&lt;/span> 192.168.10.94
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>keysvr.primary.port &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">6002&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>keysvr.primary.credentials &lt;span style="color:#ff79c6">=&lt;/span> Y8UdAzNpEDbO8bvMK5ez2W+buNUO8dShCJYgGO84B6y/waMSyTL/RdXzU1d39Pd0PfhNQZEw4LRHKJm5ySPN0kz+DGu/IGKAWbepbG9EgycA&lt;span style="color:#ff79c6">=&lt;/span>AYQA
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>페트라 싸이퍼의 구성 정보 파일은 다양한 옵션이 사용될 수 있습니다. 아래는 구성 파일에 사용할 수 있는 옵션들에 대한 설명입니다.&lt;/p>
+&lt;h4 id="필수-설정">필수 설정&lt;/h4>
+&lt;h5 id="keysvrprimaryhost">keysvr.primary.host&lt;/h5>
+&lt;p>이 파라미터는 기본 키 서버의 호스트 IP 주소를 지정합니다.&lt;/p>
+&lt;h5 id="keysvrprimaryport">keysvr.primary.port&lt;/h5>
+&lt;p>이 파라미터는 기본 키 서버의 KRED(Key Request Encrypt Decrypt)포트 번호를 지정합니다. SOHA_HOME 경로의 config/listener.list 파일에서 client_type=kred 로 설정 된 포트 값을 입력하면 됩니다. 혹은 페트라 싸이퍼 설치 계정에서 “. ~/_profile” 실행 후 키 서버 선택 한 상태에서 “petractl status” 명령어로 상태 확인 시 3번째 포트번호입니다.&lt;/p>
+&lt;h5 id="keysvrprimarycredentials">keysvr.primary.credentials&lt;/h5>
+&lt;p>이 파라미터는 기본 키 서버의 자격 증명을 지정합니다.&lt;/p>
+&lt;h4 id="선택-설정">선택 설정&lt;/h4>
+&lt;hr>
+&lt;p>키 서버 설정&lt;/p>
+&lt;hr>
+&lt;h5 id="keysvrprimarycon_timeout--5">keysvr.primary.con_timeout [=5]&lt;/h5>
+&lt;p>이 파라미터는 기본 키 서버의 연결 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
+&lt;h5 id="keysvrprimaryin_timeout--5">keysvr.primary.in_timeout [=5]&lt;/h5>
+&lt;p>이 파라미터는 기본 키 서버의 입력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
+&lt;h5 id="keysvrprimaryout_timeout--5">keysvr.primary.out_timeout [=5]&lt;/h5>
+&lt;p>이 파라미터는 기본 키 서버의 출력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
+&lt;h5 id="keysvrsecondaryhost">keysvr.secondary.host&lt;/h5>
+&lt;p>이 파라미터는 보조 키 서버의 호스트 IP 주소를 지정합니다.&lt;/p>
+&lt;h5 id="keysvrsecondaryport">keysvr.secondary.port&lt;/h5>
+&lt;p>이 파라미터는 보조 키 서버의 KRED(Key Request Encrypt Decrypt) 포트 번호를 지정합니다.&lt;/p>
+&lt;h5 id="keysvrsecondarycredentials">keysvr.secondary.credentials&lt;/h5>
+&lt;p>이 파라미터는 보조 키 서버의 자격 증명을 지정합니다.&lt;/p>
+&lt;h5 id="keysvrsecondarycon_timeout--5">keysvr.secondary.con_timeout [=5]&lt;/h5>
+&lt;p>이 파라미터는 보조 키 서버의 연결 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
+&lt;h5 id="keysvrsecondaryin_timeout--5">keysvr.secondary.in_timeout [=5]&lt;/h5>
+&lt;p>이 파라미터는 보조 키 서버의 입력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
+&lt;h5 id="keysvrsecondaryout_timeout--5">keysvr.secondary.out_timeout [=5]&lt;/h5>
+&lt;p>이 파라미터는 보조 키 서버의 출력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
+&lt;h5 id="keysvrthirdhost">keysvr.third.host&lt;/h5>
+&lt;p>이 파라미터는 세 번째 키 서버의 호스트 IP 주소를 지정합니다.&lt;/p>
+&lt;h5 id="keysvrthirdport">keysvr.third.port&lt;/h5>
+&lt;p>이 파라미터는 세 번째 키 서버의 KRED(Key Request Encrypt Decrypt) 포트 번호를 지정합니다.&lt;/p>
+&lt;h5 id="keysvrthirdcredentials">keysvr.third.credentials&lt;/h5>
+&lt;p>이 파라미터는 세 번째 키 서버의 자격 증명을 지정합니다.&lt;/p>
+&lt;h5 id="keysvrthirdcon_timeout--5">keysvr.third.con_timeout [=5]&lt;/h5>
+&lt;p>이 파라미터는 세 번째 키 서버의 연결 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
+&lt;h5 id="keysvrthirdin_timeout--5">keysvr.third.in_timeout [=5]&lt;/h5>
+&lt;p>이 파라미터는 세 번째 키 서버의 입력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
+&lt;h5 id="keysvrthirdout_timeout--5">keysvr.third.out_timeout [=5]&lt;/h5>
+&lt;p>이 파라미터는 세 번째 키 서버의 출력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
+&lt;hr>
+&lt;p>로그 관련 설정&lt;/p>
+&lt;hr>
+&lt;h5 id="trace_level--0">trace_level [=0]&lt;/h5>
+&lt;p>이 파라미터는 로그 덤프 레벨을 설정합니다. 0 혹은 10의 값으로 사용합니다. 0 값은 장애 로그만 출력되며, 10의 값은 분석을 위한 상세 로그 데이터를 출력합니다.&lt;/p>
+&lt;h5 id="log_file_path--tmppetra_cipher_apilog">log_file_path [=/tmp/petra_cipher_api.log]&lt;/h5>
+&lt;p>이 파라미터는 로그 파일의 경로를 지정합니다.&lt;/p>
+&lt;h5 id="same_err_no_log_interval--0">same_err_no_log_interval [=0]&lt;/h5>
+&lt;p>이 파라미터는 동일한 오류 번호가 발생한 경우 로그에 기록되는 간격을 지정합니다. 단위는 초 입니다. 로그가 빈번하게 발생한다면 해당 값을 30 정도로 설정합니다.&lt;/p>
+&lt;hr>
+&lt;p>기타 설정&lt;/p>
+&lt;hr>
+&lt;p>ip_prob_cmd_path [= /usr/bin/who]
+이 파라미터는 IP 주소를 검색하는 데 사용되는 명령어의 경로를 지정합니다. 세션을 얻을 때 IP 값을 사용하지 않으면 이 명령어로 IP를 추출하여 사용합니다.
+keysvr.sessions [=1]
+이 파라미터는 키 서버로 연결되는 최대 세션 수를 지정합니다. 일반적으로 1 이상의 값을 필요로 하지 않습니다.
+num_shared_session [=1]
+이 파라미터는 공유 세션의 수를 지정합니다.&lt;/p>
+&lt;h2 id="샘플-테스트">샘플 테스트&lt;/h2>
+&lt;h3 id="테스트-디렉토리-구조">테스트 디렉토리 구조&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ tree
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>.
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|-- lib64
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>| &lt;span style="color:#f1fa8c">`&lt;/span>-- libpcjapi.so
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|-- program.java
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f1fa8c">`&lt;/span>-- sinsiway
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> |-- PcaException.java
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> |-- PcaSession.java
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">`&lt;/span>-- PcaSessionPool.java
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="구성-파일">구성 파일&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ cat /var/tmp/.petra/petra_cipher_api.conf
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>keysvr.primary.host &lt;span style="color:#ff79c6">=&lt;/span> 192.168.10.94
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>keysvr.primary.port &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">6002&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>keysvr.primary.credentials &lt;span style="color:#ff79c6">=&lt;/span> Y8UdAzNpEDbO8bvMK5ez2W+buNUO8dShCJYgGO84B6y/waMSyTL/RdXzU1d39Pd0PfhNQZEw4LRHKJm5ySPN0kz+DGu/IGKAWbepbG9EgycA&lt;span style="color:#ff79c6">=&lt;/span>AYQA
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="소스코드">소스코드&lt;/h3>
+&lt;p>vi program.java&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">public&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">class&lt;/span> &lt;span style="color:#50fa7b">program&lt;/span> &lt;span style="color:#ff79c6">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd;font-style:italic">public&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">static&lt;/span> &lt;span style="color:#8be9fd">void&lt;/span> &lt;span style="color:#50fa7b">main&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>String&lt;span style="color:#ff79c6">[]&lt;/span> args&lt;span style="color:#ff79c6">)&lt;/span> &lt;span style="color:#ff79c6">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">try&lt;/span> &lt;span style="color:#ff79c6">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sinsiway&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">PcaSessionPool&lt;/span>&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">initialize&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;/var/tmp/.petra/petra_cipher_api.conf&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">,&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> sinsiway&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">PcaSession&lt;/span> session &lt;span style="color:#ff79c6">=&lt;/span> sinsiway&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">PcaSessionPool&lt;/span>&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">getSession&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;127.0.0.1&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;test&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;program&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String encryptString &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">new&lt;/span> String&lt;span style="color:#ff79c6">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String decryptString &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">new&lt;/span> String&lt;span style="color:#ff79c6">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String keyName &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">new&lt;/span> String&lt;span style="color:#ff79c6">(&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;ARIA_256_b64&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String plainString &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">new&lt;/span> String&lt;span style="color:#ff79c6">(&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;sinsiway petra cipher&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> encryptString &lt;span style="color:#ff79c6">=&lt;/span> session&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">encrypt&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>keyName&lt;span style="color:#ff79c6">,&lt;/span> plainString&lt;span style="color:#ff79c6">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> decryptString &lt;span style="color:#ff79c6">=&lt;/span> session&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">decrypt&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>keyName&lt;span style="color:#ff79c6">,&lt;/span> encryptString&lt;span style="color:#ff79c6">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">out&lt;/span>&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">println&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Original text: &amp;#34;&lt;/span> &lt;span style="color:#ff79c6">+&lt;/span> plainString&lt;span style="color:#ff79c6">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">out&lt;/span>&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">println&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Encrypted text: &amp;#34;&lt;/span> &lt;span style="color:#ff79c6">+&lt;/span> encryptString&lt;span style="color:#ff79c6">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">out&lt;/span>&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">println&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Decrypted text: &amp;#34;&lt;/span> &lt;span style="color:#ff79c6">+&lt;/span> decryptString&lt;span style="color:#ff79c6">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">}&lt;/span> &lt;span style="color:#ff79c6">catch&lt;/span> &lt;span style="color:#ff79c6">(&lt;/span>PcaException e&lt;span style="color:#ff79c6">)&lt;/span> &lt;span style="color:#ff79c6">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">out&lt;/span>&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">println&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;error_code = &amp;#34;&lt;/span> &lt;span style="color:#ff79c6">+&lt;/span> e&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">getErrCode&lt;/span>&lt;span style="color:#ff79c6">()&lt;/span> &lt;span style="color:#ff79c6">+&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34; error_message = &amp;#34;&lt;/span> &lt;span style="color:#ff79c6">+&lt;/span> e&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">getMessage&lt;/span>&lt;span style="color:#ff79c6">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span>&lt;span style="color:#ff79c6">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="아카이브-파일-컴파일">아카이브 파일 컴파일&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ javac -Xlint:unchecked sinsiway/*.java
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ jar -cvf0 lib64/PetraCipherAPI.jar ./sinsiway/*.class
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="소스코드-컴파일">소스코드 컴파일&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>javac -cp lib64/PetraCipherAPI.jar program.java
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="바이너리-실행">바이너리 실행&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ &lt;span style="color:#8be9fd;font-style:italic">export&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">LD_LIBRARY_PATH&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>./lib64
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ java ./program
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Original text: sinsiway petra cipher
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Encrypted text: vcUVmF09LkxN77fLiNlDVt+nXFhMJNhcivegvUzKKmA&lt;span style="color:#ff79c6">=&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Decrypted text: sinsiway petra cipher
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
