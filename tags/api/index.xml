@@ -210,7 +210,7 @@
 &lt;h3 id=&#34;return&#34;&gt;RETURN&lt;/h3&gt;
 &lt;p&gt;void&lt;/p&gt;
 &lt;h3 id=&#34;exception&#34;&gt;EXCEPTION&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;../../../error-codes/#-30315&#34;&gt;-30315&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30316&#34;&gt;-30316&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30502&#34;&gt;-30502&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30511&#34;&gt;-30511&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../../../../error-codes/#-30315&#34;&gt;-30315&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30316&#34;&gt;-30316&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30502&#34;&gt;-30502&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30511&#34;&gt;-30511&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>
@@ -258,7 +258,7 @@
 &lt;h3 id=&#34;return&#34;&gt;RETURN&lt;/h3&gt;
 &lt;p&gt;sinsiway.PcaSession 객체&lt;/p&gt;
 &lt;h3 id=&#34;exception&#34;&gt;EXCEPTION&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&#34;../../../error-codes/#-30309&#34;&gt;-30309&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30310&#34;&gt;-30310&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30312&#34;&gt;-30312&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30315&#34;&gt;-30315&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30316&#34;&gt;-30316&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30340&#34;&gt;-30340&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30341&#34;&gt;-30341&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30342&#34;&gt;-30342&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30343&#34;&gt;-30343&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30344&#34;&gt;-30344&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;../../../../error-codes/#-30309&#34;&gt;-30309&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30310&#34;&gt;-30310&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30312&#34;&gt;-30312&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30315&#34;&gt;-30315&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30316&#34;&gt;-30316&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30340&#34;&gt;-30340&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30341&#34;&gt;-30341&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30342&#34;&gt;-30342&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30343&#34;&gt;-30343&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30344&#34;&gt;-30344&lt;/a&gt;&lt;/p&gt;
 
       </description>
     </item>
