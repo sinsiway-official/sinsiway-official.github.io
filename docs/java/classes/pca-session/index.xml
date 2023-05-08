@@ -1,21 +1,65 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Petra Cipher Docs – sinsiway.PcaSession class</title><link>https://sinsiway-official.github.io/docs/java/classes/pca-session/</link><description>Recent content in sinsiway.PcaSession class on Petra Cipher Docs</description><generator>Hugo -- gohugo.io</generator><language>ko-KR</language><lastBuildDate>Fri, 21 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sinsiway-official.github.io/docs/java/classes/pca-session/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: encrypt() → stString</title><link>https://sinsiway-official.github.io/docs/java/classes/pca-session/encrypt/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/java/classes/pca-session/encrypt/</guid><description>
-&lt;h3 id="synopsis">SYNOPSIS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">public&lt;/span> String &lt;span style="color:#50fa7b">encrypt&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>String ecn&lt;span style="color:#ff79c6">,&lt;/span> String src&lt;span style="color:#ff79c6">)&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">throws&lt;/span> PcaException
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="description">DESCRIPTION&lt;/h3>
-&lt;p>encrypt 함수는 암호화 컬럼 이름 enc과 평문 데이터 src를 파라미터로 사용합니다.&lt;/p>
-&lt;p>ecn 파라미터에는 Petra Cipher Key Server에서 생성한 암호화 컬럼의 이름을 전달해야 합니다. src 파라미터에는 암호화하고자 하는 평문 데이터를 전달해야 합니다. 이 때, null 값을 전달하면 null을 반환합니다. encrypt 함수가 반환하는 값은 암호화된 데이터입니다. 이를 복호화하려면 decrypt 함수를 사용해야 합니다.&lt;/p>
-&lt;p>PcaException이 발생할 수 있으므로, 예외처리를 반드시 해주어야 합니다.&lt;/p>
-&lt;h3 id="return">RETURN&lt;/h3>
-&lt;p>String 암호화 데이터&lt;/p>
-&lt;h3 id="exception">EXCEPTION&lt;/h3>
-&lt;p>&lt;a href="../../../error-codes/#-30101">-30101&lt;/a>, &lt;a href="../../../error-codes/#-30103">-30103&lt;/a>, &lt;a href="../../../error-codes/#-30106">-30106&lt;/a>, &lt;a href="../../../error-codes/#-30115">-30115&lt;/a>, &lt;a href="../../../error-codes/#-30117">-30117&lt;/a>, &lt;a href="../../../error-codes/#-30301">-30301&lt;/a>, &lt;a href="../../../error-codes/#-30302">-30302&lt;/a>, &lt;a href="../../../error-codes/#-30351">-30351&lt;/a>, &lt;a href="../../../error-codes/#-30388">-30388&lt;/a>&lt;/p></description></item><item><title>Docs: decrypt() → stString</title><link>https://sinsiway-official.github.io/docs/java/classes/pca-session/decrypt/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/java/classes/pca-session/decrypt/</guid><description>
-&lt;h3 id="synopsis">SYNOPSIS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">public&lt;/span> String &lt;span style="color:#50fa7b">decrypt&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>String ecn&lt;span style="color:#ff79c6">,&lt;/span> String src&lt;span style="color:#ff79c6">)&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">throws&lt;/span> PcaException
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="description">DESCRIPTION&lt;/h3>
-&lt;p>decrypt 함수는 암호화된 데이터인 src와 해당 암호화 컬럼의 이름인 ecn을 파라미터로 사용합니다.&lt;/p>
-&lt;p>ecn 파라미터는 암호화 컬럼 이름을 전달해야 합니다. src 파라미터는 암호화된 데이터를 전달해야 합니다. 만약 null 값을 전달하면 null이 반환됩니다. decrypt 함수의 반환값은 복호화된 평문 데이터입니다.&lt;/p>
-&lt;p>PcaException이 발생할 수 있으므로, 반드시 예외처리를 해주어야 합니다.&lt;/p>
-&lt;h3 id="return">RETURN&lt;/h3>
-&lt;p>String 복호화 데이터&lt;/p>
-&lt;h3 id="exception">EXCEPTION&lt;/h3>
-&lt;p>&lt;a href="../../../error-codes/#-30101">-30101&lt;/a>, &lt;a href="../../../error-codes/#-30103">-30103&lt;/a>, &lt;a href="../../../error-codes/#-30105">-30105&lt;/a>, &lt;a href="../../../error-codes/#-30106">-30106&lt;/a>, &lt;a href="../../../error-codes/#-30107">-30107&lt;/a>, &lt;a href="../../../error-codes/#-30108">-30108&lt;/a>, &lt;a href="../../../error-codes/#-30111">-30111&lt;/a>, &lt;a href="../../../error-codes/#-30116">-30116&lt;/a>, &lt;a href="../../../error-codes/#-30117">-30117&lt;/a>, &lt;a href="../../../error-codes/#-30118">-30118&lt;/a>, &lt;a href="../../../error-codes/#-30302">-30302&lt;/a>, &lt;a href="../../../error-codes/#-30351">-30351&lt;/a>, &lt;a href="../../../error-codes/#-30388">-30388&lt;/a>, &lt;a href="../../../error-codes/#-30401">-30401&lt;/a>&lt;/p></description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Petra Cipher Docs – sinsiway.PcaSession class</title>
+    <link>https://sinsiway-official.github.io/docs/java/classes/pca-session/</link>
+    <description>Recent content in sinsiway.PcaSession class on Petra Cipher Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 21 Apr 2023 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://sinsiway-official.github.io/docs/java/classes/pca-session/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: encrypt() → stString</title>
+      <link>https://sinsiway-official.github.io/docs/java/classes/pca-session/encrypt/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/java/classes/pca-session/encrypt/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#50fa7b&#34;&gt;encrypt&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;String ecn&lt;span style=&#34;color:#ff79c6&#34;&gt;,&lt;/span&gt; String src&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;throws&lt;/span&gt; PcaException
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h3&gt;
+&lt;p&gt;encrypt 함수는 암호화 컬럼 이름 enc과 평문 데이터 src를 파라미터로 사용합니다.&lt;/p&gt;
+&lt;p&gt;ecn 파라미터에는 Petra Cipher Key Server에서 생성한 암호화 컬럼의 이름을 전달해야 합니다. src 파라미터에는 암호화하고자 하는 평문 데이터를 전달해야 합니다. 이 때, null 값을 전달하면 null을 반환합니다. encrypt 함수가 반환하는 값은 암호화된 데이터입니다. 이를 복호화하려면 decrypt 함수를 사용해야 합니다.&lt;/p&gt;
+&lt;p&gt;PcaException이 발생할 수 있으므로, 예외처리를 반드시 해주어야 합니다.&lt;/p&gt;
+&lt;h3 id=&#34;return&#34;&gt;RETURN&lt;/h3&gt;
+&lt;p&gt;String 암호화 데이터&lt;/p&gt;
+&lt;h3 id=&#34;exception&#34;&gt;EXCEPTION&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;../../../../error-codes/#-30101&#34;&gt;-30101&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30103&#34;&gt;-30103&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30106&#34;&gt;-30106&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30115&#34;&gt;-30115&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30117&#34;&gt;-30117&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30301&#34;&gt;-30301&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30302&#34;&gt;-30302&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30351&#34;&gt;-30351&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30388&#34;&gt;-30388&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: decrypt() → stString</title>
+      <link>https://sinsiway-official.github.io/docs/java/classes/pca-session/decrypt/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/java/classes/pca-session/decrypt/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#50fa7b&#34;&gt;decrypt&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;String ecn&lt;span style=&#34;color:#ff79c6&#34;&gt;,&lt;/span&gt; String src&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;throws&lt;/span&gt; PcaException
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h3&gt;
+&lt;p&gt;decrypt 함수는 암호화된 데이터인 src와 해당 암호화 컬럼의 이름인 ecn을 파라미터로 사용합니다.&lt;/p&gt;
+&lt;p&gt;ecn 파라미터는 암호화 컬럼 이름을 전달해야 합니다. src 파라미터는 암호화된 데이터를 전달해야 합니다. 만약 null 값을 전달하면 null이 반환됩니다. decrypt 함수의 반환값은 복호화된 평문 데이터입니다.&lt;/p&gt;
+&lt;p&gt;PcaException이 발생할 수 있으므로, 반드시 예외처리를 해주어야 합니다.&lt;/p&gt;
+&lt;h3 id=&#34;return&#34;&gt;RETURN&lt;/h3&gt;
+&lt;p&gt;String 복호화 데이터&lt;/p&gt;
+&lt;h3 id=&#34;exception&#34;&gt;EXCEPTION&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;../../../../error-codes/#-30101&#34;&gt;-30101&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30103&#34;&gt;-30103&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30105&#34;&gt;-30105&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30106&#34;&gt;-30106&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30107&#34;&gt;-30107&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30108&#34;&gt;-30108&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30111&#34;&gt;-30111&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30116&#34;&gt;-30116&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30117&#34;&gt;-30117&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30118&#34;&gt;-30118&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30302&#34;&gt;-30302&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30351&#34;&gt;-30351&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30388&#34;&gt;-30388&lt;/a&gt;, &lt;a href=&#34;../../../../error-codes/#-30401&#34;&gt;-30401&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

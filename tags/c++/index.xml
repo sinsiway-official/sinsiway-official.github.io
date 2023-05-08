@@ -1,321 +1,435 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Petra Cipher Docs – c++</title><link>https://sinsiway-official.github.io/tags/c++/</link><description>Recent content in c++ on Petra Cipher Docs</description><generator>Hugo -- gohugo.io</generator><language>ko-KR</language><lastBuildDate>Tue, 11 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sinsiway-official.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Linux</title><link>https://sinsiway-official.github.io/docs/c-cpp/get-started/installation/linux/</link><pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/c-cpp/get-started/installation/linux/</guid><description>
-&lt;h2 id="시스템-요구사항">시스템 요구사항&lt;/h2>
-&lt;h3 id="운영체제">운영체제&lt;/h3>
-&lt;p>본 프로그램은 Linux 64Bit 계열의 운영체제에서 동작합니다.&lt;/p>
-&lt;h3 id="커널-버전">커널 버전&lt;/h3>
-&lt;p>본 프로그램을 실행하기 위해서는 Linux 계열의 운영체제에서 사용되는 커널 버전 2.6.32 이상이 요구됩니다.&lt;/p>
-&lt;h3 id="컴파일러">컴파일러&lt;/h3>
-&lt;p>본 프로그램을 컴파일하기 위해서는 GCC 컴파일러 4.4.7 이상이 요구됩니다.&lt;/p>
-&lt;h2 id="다운로드-및-설치">다운로드 및 설치&lt;/h2>
-&lt;p>본 프로그램을 사용하기 위한 libpcapi.so 라이브러리 파일과 PcAPIL.h 헤더 파일을 다운로드합니다.&lt;/p>
-&lt;h3 id="라이브러리-설치">라이브러리 설치&lt;/h3>
-&lt;p>라이브러리는 시스템 라이브러리 경로와 커스텀 라이브러리 두 가지 경로로 설치 가능합니다. 일반적으로 커스텀 라이브러리 경로를 사용해 설치합니다.&lt;/p>
-&lt;h4 id="시스템-라이브러리-경로에-설치하는-방법">시스템 라이브러리 경로에 설치하는 방법&lt;/h4>
-&lt;p>libpcapi.so 파일을 /usr/lib64 디렉토리에 설치하여 시스템 전역에서 사용할 수 있도록 할 수 있습니다. 이 방법은 다음과 같이 진행됩니다.
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Petra Cipher Docs – c&#43;&#43;</title>
+    <link>https://sinsiway-official.github.io/tags/c&#43;&#43;/</link>
+    <description>Recent content in c&#43;&#43; on Petra Cipher Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Tue, 11 Apr 2023 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://sinsiway-official.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Linux</title>
+      <link>https://sinsiway-official.github.io/docs/c-cpp/get-started/installation/linux/</link>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/c-cpp/get-started/installation/linux/</guid>
+      <description>
+        
+        
+        &lt;h2 id=&#34;시스템-요구사항&#34;&gt;시스템 요구사항&lt;/h2&gt;
+&lt;h3 id=&#34;운영체제&#34;&gt;운영체제&lt;/h3&gt;
+&lt;p&gt;본 프로그램은 Linux 64Bit 계열의 운영체제에서 동작합니다.&lt;/p&gt;
+&lt;h3 id=&#34;커널-버전&#34;&gt;커널 버전&lt;/h3&gt;
+&lt;p&gt;본 프로그램을 실행하기 위해서는 Linux 계열의 운영체제에서 사용되는 커널 버전 2.6.32 이상이 요구됩니다.&lt;/p&gt;
+&lt;h3 id=&#34;컴파일러&#34;&gt;컴파일러&lt;/h3&gt;
+&lt;p&gt;본 프로그램을 컴파일하기 위해서는 GCC 컴파일러 4.4.7 이상이 요구됩니다.&lt;/p&gt;
+&lt;h2 id=&#34;다운로드-및-설치&#34;&gt;다운로드 및 설치&lt;/h2&gt;
+&lt;p&gt;본 프로그램을 사용하기 위한 libpcapi.so 라이브러리 파일과 PcAPIL.h 헤더 파일을  다운로드합니다.&lt;/p&gt;
+&lt;h3 id=&#34;라이브러리-설치&#34;&gt;라이브러리 설치&lt;/h3&gt;
+&lt;p&gt;라이브러리는 시스템 라이브러리 경로와 커스텀 라이브러리 두 가지 경로로 설치 가능합니다. 일반적으로 커스텀 라이브러리 경로를 사용해 설치합니다.&lt;/p&gt;
+&lt;h4 id=&#34;시스템-라이브러리-경로에-설치하는-방법&#34;&gt;시스템 라이브러리 경로에 설치하는 방법&lt;/h4&gt;
+&lt;p&gt;libpcapi.so 파일을 /usr/lib64 디렉토리에 설치하여 시스템 전역에서 사용할 수 있도록 할 수 있습니다. 이 방법은 다음과 같이 진행됩니다.
 root 권한으로 터미널을 열고, libpcapi.so 파일을 다운로드합니다.
-다운로드한 파일을 /lib 또는 /lib64 디렉토리에 복사합니다.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ sudo cp libpcapi.so /usr/lib64
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>파일의 권한을 변경합니다.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ sudo chmod &lt;span style="color:#bd93f9">755&lt;/span> /usr/lib64/libpcapi.so
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="커스텀-라이브러리-경로에-설치하는-방법">커스텀 라이브러리 경로에 설치하는 방법&lt;/h4>
-&lt;p>libpcapi.so 파일을 사용하는 애플리케이션의 실행 환경에 따라 커스텀 라이브러리 경로에 설치하여 사용할 수도 있습니다. 이 방법은 다음과 같이 진행됩니다.
-애플리케이션 실행 파일이 위치한 디렉토리에 libpcapi.so 파일을 복사합니다.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ cp libpcapi.so /usr/local/lib64
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>LD_LIBRARY_PATH 환경 변수에 라이브러리 파일이 있는 경로를 등록합니다.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ &lt;span style="color:#8be9fd;font-style:italic">export&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">LD_LIBRARY_PATH&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>/usr/local/lib64
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="헤더파일-설치">헤더파일 설치&lt;/h3>
-&lt;p>libpcapi.so 파일을 사용하여 컴파일하는 애플리케이션의 실행 환경에 따라 PcAPIL.h 헤더 파일을 설치하여 사용합니다. 경로는 사용자 환경에 맞추어 사용하면 됩니다.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ cp PcAPIL.h /usr/local/include
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="컴파일">컴파일&lt;/h2>
-&lt;p>Petra Cipher 라이브러리를 사용하기 위해서는, 해당 라이브러리를 사용하는 애플리케이션에서 컴파일 시 필요한 옵션을 지정해주어야 합니다.&lt;/p>
-&lt;h3 id="라이브러리-링크-옵션-설정">라이브러리 링크 옵션 설정&lt;/h3>
-&lt;p>libpcapi.so를 사용하는 프로그램을 컴파일하기 위해서는 -lpcapi 옵션을 사용하여 라이브러리를 링크해야 합니다.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>gcc -o program program.c -lpcapi
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>위 명령어에서 -o 옵션은 출력 파일 이름을 설정하며, program.c는 컴파일할 소스 코드 파일 이름을 의미합니다.&lt;/p>
-&lt;h3 id="라이브러리-경로-설정">라이브러리 경로 설정&lt;/h3>
-&lt;p>libpcapi.so 라이브러리를 사용하는 경우, 컴파일러가 라이브러리를 찾을 수 있도록 라이브러리 경로를 설정해야 합니다. 이를 위해서는 -L 옵션을 사용하여 라이브러리가 설치된 경로를 지정합니다.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>gcc -L/usr/local/lib64 -o program program.c -lpcapi
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>위 명령어에서 -L 옵션은 라이브러리 경로를 설정하며, 그 뒤의 /usr/local/lib64 경로는 libpcapi.so 라이브러리가 설치된 경로입니다.&lt;/p>
-&lt;h3 id="헤더-경로-설정">헤더 경로 설정&lt;/h3>
-&lt;p>컴파일러가 헤더파일을 찾을 수 있도록 헤더파일 경로를 설정해야 합니다. 이를 위해서는 -i 옵션을 사용하여 라이브러리가 설치된 경로를 지정합니다.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>gcc -I/usr/local/include -L/usr/local/lib64 -o program program.c -lpcapi
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>위 명령어에서 -I 옵션은 헤더파일 경로를 설정하며, 그 뒤의 /usr/local/include 경로는 PcAPIL.h 헤더파일이 설치된 경로입니다.&lt;/p>
-&lt;h3 id="프로그램-실행">프로그램 실행&lt;/h3>
-&lt;p>program 실행 파일을 생성하고 실행합니다.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>./program
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>위 명령어를 실행하면 program 프로그램이 실행됩니다.
-단, 프로그램에서 암복호화 함수 호출을 위해 반드시 서버에 구성 파일을 작성해두어야 합니다. 구성 파일의 설정 방법은 아래와 같습니다.&lt;/p>
-&lt;h2 id="구성-파일-설정">구성 파일 설정&lt;/h2>
-&lt;p>본 프로그램을 실행하기 위해선 페트라 싸이퍼 키 서버 정보가 저장 된 구성 파일을 필요로합니다.
-구성 파일은 소스코드 내부에서 초기화 함수로 특별히 지정하지 않으면 “/var/tmp/.petra/petra_cipher_api.conf” 기본 경로를 사용합니다.&lt;/p>
-&lt;h3 id="자격-증명-값-생성">자격 증명 값 생성&lt;/h3>
-&lt;p>구성 파일 작성을 위해 우선 키 서버에서 자격 증명 값을 생성해야 합니다. 자격 증명 값은 키 서버에서 pcp_credentials 바이너리를 통해 생성할 수 있습니다.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ pcp_credentials generate -svc demo -user dgadmin -password abc -&lt;span style="color:#ff79c6">[&lt;/span>key|svc_home&lt;span style="color:#ff79c6">]&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="옵션">옵션&lt;/h4>
-&lt;h5 id="-svc-soha_svc">-svc SOHA_SVC&lt;/h5>
-&lt;p>SOHA_SVC는 페트라 싸이퍼 인 메모리 데이터베이스 SOHA DBMS의 서비스 이름입니다. 페트라 싸이퍼 설치 계정에서 env | grep SOHA_SVC 를 통해 값을 확인할 수 있습니다.&lt;/p>
-&lt;h5 id="-user-soha_user">-user soha_user&lt;/h5>
-&lt;p>SOHA DBMS의 접속 계정입니다. 기본값으로 dgadmin을 사용합니다.&lt;/p>
-&lt;h5 id="-password-soha_password">-password soha_password&lt;/h5>
-&lt;p>SOHA DBMS 계정의 비밀번호입니다. 기본값으로 petra@one1을 사용합니다.&lt;/p>
-&lt;h5 id="-key-credentials_password-선택">-key [=credentials_password] (선택)&lt;/h5>
-&lt;p>생성하려는 자격 증명 값에 대한 비밀번호입니다. 만약 자격 증명 값을 생성할 때 비밀번호를 사용하면 라이브러리를 사용하는 프로그램에서 반드시 초기화 함수를 사용해 자격 증명 값 비밀번호를 입력해야 합니다. 선택할 수 있는 값으로 사용하지 않으면 비밀번호를 사용하지 않습니다.&lt;/p>
-&lt;h5 id="-soha_home-soha_home-선택">-soha_home [=SOHA_HOME] (선택)&lt;/h5>
-&lt;p>로컬 키 서버를 사용하기 위해 설정할 수 있는 SOHA DBMS의 설치 경로입니다. 페트라 싸이퍼 설치 계정에서 env | grep SOHA_HOME 으로 확인할 수 있습니다. 응용 프로그램과 같은 서버에 설치 된 키 서버에 프로세스 파이프 통신을 통해 보다 빠른 속도로 키 데이터를 얻어오는 구성을 사용할 때 선택할 수 있는 값입니다. 옵션을 사용하기 위해 구성 파일에서 키 서버 호스트 값을 &amp;ldquo;LOCAL&amp;quot;로 설정해야 합니다.&lt;/p>
-&lt;p>다음과 같이 생성할 수 있습니다.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ env | grep SOHA_SVC
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">SOHA_SVC&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>keysvr
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ pcp_credentials generate -svc keysvr -user dgadmin -password petra@one1
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">credentials&lt;/span> &lt;span style="color:#ff79c6">=&lt;/span>&amp;gt; Y8UdAzNpEDbO8bvMK5ez2W+buNUO8dShCJYgGO84B6y/waMSyTL/RdXzU1d39Pd0PfhNQZEw4LRHKJm5ySPN0kz+DGu/IGKAWbepbG9EgycA&lt;span style="color:#ff79c6">=&lt;/span>AYQA
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="구성파일-생성">구성파일 생성&lt;/h3>
-&lt;p>구성 파일을 다음과 같이 작성할 수 있습니다. 먼저 vi를 통해 기본 경로인 “/var/tmp/.petra/petra_cipher_api.conf” 파일을 열어줍니다.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>vi /var/tmp/.petra/petra_cipher_api.conf
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>다음과 같이 키 서버 정보를 입력합니다.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>keysvr.primary.host &lt;span style="color:#ff79c6">=&lt;/span> 192.168.10.94
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>keysvr.primary.port &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">6002&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>keysvr.primary.credentials &lt;span style="color:#ff79c6">=&lt;/span> Y8UdAzNpEDbO8bvMK5ez2W+buNUO8dShCJYgGO84B6y/waMSyTL/RdXzU1d39Pd0PfhNQZEw4LRHKJm5ySPN0kz+DGu/IGKAWbepbG9EgycA&lt;span style="color:#ff79c6">=&lt;/span>AYQA
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>페트라 싸이퍼의 구성 정보 파일은 다양한 옵션이 사용될 수 있습니다. 아래는 구성 파일에 사용할 수 있는 옵션들에 대한 설명입니다.&lt;/p>
-&lt;h4 id="필수-설정">필수 설정&lt;/h4>
-&lt;h5 id="keysvrprimaryhost">keysvr.primary.host&lt;/h5>
-&lt;p>이 파라미터는 기본 키 서버의 호스트 IP 주소를 지정합니다.&lt;/p>
-&lt;h5 id="keysvrprimaryport">keysvr.primary.port&lt;/h5>
-&lt;p>이 파라미터는 기본 키 서버의 KRED(Key Request Encrypt Decrypt)포트 번호를 지정합니다. SOHA_HOME 경로의 config/listener.list 파일에서 client_type=kred 로 설정 된 포트 값을 입력하면 됩니다. 혹은 페트라 싸이퍼 설치 계정에서 “. ~/_profile” 실행 후 키 서버 선택 한 상태에서 “petractl status” 명령어로 상태 확인 시 3번째 포트번호입니다.&lt;/p>
-&lt;h5 id="keysvrprimarycredentials">keysvr.primary.credentials&lt;/h5>
-&lt;p>이 파라미터는 기본 키 서버의 자격 증명을 지정합니다.&lt;/p>
-&lt;h4 id="선택-설정">선택 설정&lt;/h4>
-&lt;hr>
-&lt;p>키 서버 설정&lt;/p>
-&lt;hr>
-&lt;h5 id="keysvrprimarycon_timeout--5">keysvr.primary.con_timeout [=5]&lt;/h5>
-&lt;p>이 파라미터는 기본 키 서버의 연결 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
-&lt;h5 id="keysvrprimaryin_timeout--5">keysvr.primary.in_timeout [=5]&lt;/h5>
-&lt;p>이 파라미터는 기본 키 서버의 입력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
-&lt;h5 id="keysvrprimaryout_timeout--5">keysvr.primary.out_timeout [=5]&lt;/h5>
-&lt;p>이 파라미터는 기본 키 서버의 출력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
-&lt;h5 id="keysvrsecondaryhost">keysvr.secondary.host&lt;/h5>
-&lt;p>이 파라미터는 보조 키 서버의 호스트 IP 주소를 지정합니다.&lt;/p>
-&lt;h5 id="keysvrsecondaryport">keysvr.secondary.port&lt;/h5>
-&lt;p>이 파라미터는 보조 키 서버의 KRED(Key Request Encrypt Decrypt) 포트 번호를 지정합니다.&lt;/p>
-&lt;h5 id="keysvrsecondarycredentials">keysvr.secondary.credentials&lt;/h5>
-&lt;p>이 파라미터는 보조 키 서버의 자격 증명을 지정합니다.&lt;/p>
-&lt;h5 id="keysvrsecondarycon_timeout--5">keysvr.secondary.con_timeout [=5]&lt;/h5>
-&lt;p>이 파라미터는 보조 키 서버의 연결 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
-&lt;h5 id="keysvrsecondaryin_timeout--5">keysvr.secondary.in_timeout [=5]&lt;/h5>
-&lt;p>이 파라미터는 보조 키 서버의 입력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
-&lt;h5 id="keysvrsecondaryout_timeout--5">keysvr.secondary.out_timeout [=5]&lt;/h5>
-&lt;p>이 파라미터는 보조 키 서버의 출력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
-&lt;h5 id="keysvrthirdhost">keysvr.third.host&lt;/h5>
-&lt;p>이 파라미터는 세 번째 키 서버의 호스트 IP 주소를 지정합니다.&lt;/p>
-&lt;h5 id="keysvrthirdport">keysvr.third.port&lt;/h5>
-&lt;p>이 파라미터는 세 번째 키 서버의 KRED(Key Request Encrypt Decrypt) 포트 번호를 지정합니다.&lt;/p>
-&lt;h5 id="keysvrthirdcredentials">keysvr.third.credentials&lt;/h5>
-&lt;p>이 파라미터는 세 번째 키 서버의 자격 증명을 지정합니다.&lt;/p>
-&lt;h5 id="keysvrthirdcon_timeout--5">keysvr.third.con_timeout [=5]&lt;/h5>
-&lt;p>이 파라미터는 세 번째 키 서버의 연결 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
-&lt;h5 id="keysvrthirdin_timeout--5">keysvr.third.in_timeout [=5]&lt;/h5>
-&lt;p>이 파라미터는 세 번째 키 서버의 입력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
-&lt;h5 id="keysvrthirdout_timeout--5">keysvr.third.out_timeout [=5]&lt;/h5>
-&lt;p>이 파라미터는 세 번째 키 서버의 출력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p>
-&lt;hr>
-&lt;p>로그 관련 설정&lt;/p>
-&lt;hr>
-&lt;h5 id="trace_level--0">trace_level [=0]&lt;/h5>
-&lt;p>이 파라미터는 로그 덤프 레벨을 설정합니다. 0 혹은 10의 값으로 사용합니다. 0 값은 장애 로그만 출력되며, 10의 값은 분석을 위한 상세 로그 데이터를 출력합니다.&lt;/p>
-&lt;h5 id="log_file_path--tmppetra_cipher_apilog">log_file_path [=/tmp/petra_cipher_api.log]&lt;/h5>
-&lt;p>이 파라미터는 로그 파일의 경로를 지정합니다.&lt;/p>
-&lt;h5 id="same_err_no_log_interval--0">same_err_no_log_interval [=0]&lt;/h5>
-&lt;p>이 파라미터는 동일한 오류 번호가 발생한 경우 로그에 기록되는 간격을 지정합니다. 단위는 초 입니다. 로그가 빈번하게 발생한다면 해당 값을 30 정도로 설정합니다.&lt;/p>
-&lt;hr>
-&lt;p>기타 설정&lt;/p>
-&lt;hr>
-&lt;p>ip_prob_cmd_path [= /usr/bin/who]
-이 파라미터는 IP 주소를 검색하는 데 사용되는 명령어의 경로를 지정합니다. 세션을 얻을 때 IP 값을 사용하지 않으면 이 명령어로 IP를 추출하여 사용합니다.
-keysvr.sessions [=1]
-이 파라미터는 키 서버로 연결되는 최대 세션 수를 지정합니다. 일반적으로 1 이상의 값을 필요로 하지 않습니다.
-num_shared_session [=1]
-이 파라미터는 공유 세션의 수를 지정합니다.&lt;/p>
-&lt;h2 id="샘플-테스트">샘플 테스트&lt;/h2>
-&lt;h3 id="테스트-디렉토리-구조">테스트 디렉토리 구조&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ tree
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>.
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|-- include
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>| &lt;span style="color:#f1fa8c">`&lt;/span>-- PcAPIL.h
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>|-- lib64
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>| &lt;span style="color:#f1fa8c">`&lt;/span>-- libpcapi.so
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f1fa8c">`&lt;/span>-- program.c
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="구성-파일">구성 파일&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ cat /var/tmp/.petra/petra_cipher_api.conf
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>keysvr.primary.host &lt;span style="color:#ff79c6">=&lt;/span> 192.168.10.94
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>keysvr.primary.port &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">6002&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>keysvr.primary.credentials &lt;span style="color:#ff79c6">=&lt;/span> Y8UdAzNpEDbO8bvMK5ez2W+buNUO8dShCJYgGO84B6y/waMSyTL/RdXzU1d39Pd0PfhNQZEw4LRHKJm5ySPN0kz+DGu/IGKAWbepbG9EgycA&lt;span style="color:#ff79c6">=&lt;/span>AYQA
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="소스코드">소스코드&lt;/h3>
-&lt;p>vi program.c&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span style="color:#ff79c6">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;lt;stdlib.h&amp;gt;&lt;/span>&lt;span style="color:#ff79c6">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;lt;string.h&amp;gt;&lt;/span>&lt;span style="color:#ff79c6">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;#34;PcAPIL.h&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">#define MAX_TEXT_LENGTH 1024
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#50fa7b">main&lt;/span>(&lt;span style="color:#8be9fd">int&lt;/span> argc, &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">const&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>argv[])
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">// Initialize Petra Cipher library with configuration file path.
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span> &lt;span style="color:#6272a4">// Note: This function is optional. If not called, default values will be used.
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span> PcAPI_initialize(&lt;span style="color:#f1fa8c">&amp;#34;/var/tmp/.petra/petra_cipher_api.conf&amp;#34;&lt;/span>, &lt;span style="color:#f1fa8c">&amp;#34;&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">// Initialize variables for encryption and decryption.
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> encryptText[MAX_TEXT_LENGTH];
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> decryptText[MAX_TEXT_LENGTH];
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">// Get session ID from key server.
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span> &lt;span style="color:#8be9fd">int&lt;/span> sid &lt;span style="color:#ff79c6">=&lt;/span> PcAPI_getSession(&lt;span style="color:#f1fa8c">&amp;#34;&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span> (sid &lt;span style="color:#ff79c6">&amp;lt;&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> printf(&lt;span style="color:#f1fa8c">&amp;#34;Failed to get session ID.&lt;/span>&lt;span style="color:#f1fa8c">\n&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#ff79c6">-&lt;/span>&lt;span style="color:#bd93f9">1&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">// Set encryption key name and plain text for encryption.
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>keyName &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;AES_256_b64&amp;#34;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">const&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>plainText &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;sinsiway petra cipher&amp;#34;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">int&lt;/span> plainTextLen &lt;span style="color:#ff79c6">=&lt;/span> strlen(plainText);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">int&lt;/span> encryptTextLen &lt;span style="color:#ff79c6">=&lt;/span> MAX_TEXT_LENGTH;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">int&lt;/span> decryptTextLen &lt;span style="color:#ff79c6">=&lt;/span> MAX_TEXT_LENGTH;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">// Initialize encryption and decryption buffers.
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span> memset(encryptText, &lt;span style="color:#bd93f9">0&lt;/span>, encryptTextLen);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> memset(decryptText, &lt;span style="color:#bd93f9">0&lt;/span>, decryptTextLen);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">// Encrypt plain text using Petra Cipher library.
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span> &lt;span style="color:#8be9fd">int&lt;/span> rtn &lt;span style="color:#ff79c6">=&lt;/span> PcAPI_encrypt_name(sid, keyName, (&lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>)plainText, plainTextLen, encryptText, &lt;span style="color:#ff79c6">&amp;amp;&lt;/span>encryptTextLen);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span> (rtn &lt;span style="color:#ff79c6">&amp;lt;&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> printf(&lt;span style="color:#f1fa8c">&amp;#34;Encryption failed with error code %d.&lt;/span>&lt;span style="color:#f1fa8c">\n&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>, rtn);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#ff79c6">-&lt;/span>&lt;span style="color:#bd93f9">1&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">// Decrypt encrypted text using Petra Cipher library.
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span> rtn &lt;span style="color:#ff79c6">=&lt;/span> PcAPI_decrypt_name(sid, keyName, encryptText, encryptTextLen, decryptText, &lt;span style="color:#ff79c6">&amp;amp;&lt;/span>decryptTextLen);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">if&lt;/span> (rtn &lt;span style="color:#ff79c6">&amp;lt;&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> printf(&lt;span style="color:#f1fa8c">&amp;#34;Decryption failed with error code %d.&lt;/span>&lt;span style="color:#f1fa8c">\n&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>, rtn);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#ff79c6">-&lt;/span>&lt;span style="color:#bd93f9">1&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> decryptText[decryptTextLen] &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#39;\0&amp;#39;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#6272a4">// Print original, encrypted, and decrypted texts.
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#6272a4">&lt;/span> printf(&lt;span style="color:#f1fa8c">&amp;#34;Original text: %s&lt;/span>&lt;span style="color:#f1fa8c">\n&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>, plainText);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> printf(&lt;span style="color:#f1fa8c">&amp;#34;Encrypted text: %s&lt;/span>&lt;span style="color:#f1fa8c">\n&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>, encryptText);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> printf(&lt;span style="color:#f1fa8c">&amp;#34;Decrypted text: %s&lt;/span>&lt;span style="color:#f1fa8c">\n&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;&lt;/span>, decryptText);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="소스코드-컴파일">소스코드 컴파일&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ gcc -I./include -L./lib64 -o program -g program.c -lpcapi
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="바이너리-실행">바이너리 실행&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ &lt;span style="color:#8be9fd;font-style:italic">export&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">LD_LIBRARY_PATH&lt;/span>&lt;span style="color:#ff79c6">=&lt;/span>./lib64
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ ./program
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Original text: sinsiway petra cipher
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Encrypted text: vcUVmF09LkxN77fLiNlDVt+nXFhMJNhcivegvUzKKmA&lt;span style="color:#ff79c6">=&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Decrypted text: sinsiway petra cipher
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: PcAPI_initialize → void</title><link>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-initilize/</link><pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-initilize/</guid><description>
-&lt;h3 id="synopsis">SYNOPSIS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;#34;PcAPIL.h&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#50fa7b">PcAPI_initialize&lt;/span>(&lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>info_file_path, &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>credentials_pw);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="description">DESCRIPTION&lt;/h3>
-&lt;p>PcAPI_initialize 함수는 libpcapi.so 라이브러리를 사용하기 위한 구성 파일을 설정합니다. 구성 파일은 키 관리 서버 설정과 인증에 필요한 자격 증명 정보 등을 포함하고 있습니다.
-함수의 info_file_path 매개변수에는 구성 파일의 전체 경로와 파일명을 입력해야 하며, credentials_pw 매개변수에는 자격 증명 비밀번호를 입력해야 합니다. 이 비밀번호는 info_file_path 파일의 내용 중 credentials 값을 발급할 때 사용한 비밀번호와 동일해야 합니다. 만약 비밀번호를 사용하지 않았다면 빈 값(&amp;quot;&amp;quot;)을 입력하면 됩니다.&lt;/p>
-&lt;p>함수가 호출되지 않았을 때 기본적으로 읽어오는 경로는 &amp;ldquo;/var/tmp/.petra/petra_cipher_api.conf&amp;rdquo; 이며, 비밀번호는 사용되지 않습니다.&lt;/p>
-&lt;p>자세한 정보는 &amp;ldquo;&lt;a href="../../get-started/installation/linux/#%EA%B5%AC%EC%84%B1-%ED%8C%8C%EC%9D%BC-%EC%84%A4%EC%A0%95">설치 가이드 - 구성 파일&lt;/a>&amp;rdquo; 부분을 참고하시기 바랍니다.&lt;/p>
-&lt;h3 id="return-value">RETURN VALUE&lt;/h3>
-&lt;p>성공 시 &lt;strong>0&lt;/strong>을 반환합니다.&lt;/p>
-&lt;p>오류가 발생하면 0 보다 작은 &lt;a href="../../../error-codes">에러 코드&lt;/a>를 반환합니다.&lt;/p>
-&lt;h3 id="errors">ERRORS&lt;/h3>
-&lt;p>&lt;a href="../../../error-codes/#-30315">-30315&lt;/a>, &lt;a href="../../../error-codes/#-30316">-30316&lt;/a>, &lt;a href="../../../error-codes/#-30502">-30502&lt;/a>, &lt;a href="../../../error-codes/#-30511">-30511&lt;/a>&lt;/p>
-&lt;h3 id="note">NOTE&lt;/h3>
-&lt;div class="alert alert-primary" role="alert">
-일반적으로 &lt;strong>PcAPI_initialize()&lt;/strong> 함수는 기본 경로인 &lt;strong>/var/tmp/.petra/petra_cipher_api.conf 를 사용할 수 있을 경우 호출하지 않고 기본 경로를 사용합니다.&lt;/strong>
+다운로드한 파일을 /lib 또는 /lib64 디렉토리에 복사합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo cp libpcapi.so /usr/lib64 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;파일의 권한을 변경합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ sudo chmod &lt;span style=&#34;color:#bd93f9&#34;&gt;755&lt;/span&gt; /usr/lib64/libpcapi.so
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;커스텀-라이브러리-경로에-설치하는-방법&#34;&gt;커스텀 라이브러리 경로에 설치하는 방법&lt;/h4&gt;
+&lt;p&gt;libpcapi.so 파일을 사용하는 애플리케이션의 실행 환경에 따라 커스텀 라이브러리 경로에 설치하여 사용할 수도 있습니다. 이 방법은 다음과 같이 진행됩니다.
+애플리케이션 실행 파일이 위치한 디렉토리에 libpcapi.so 파일을 복사합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ cp libpcapi.so /usr/local/lib64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;LD_LIBRARY_PATH 환경 변수에 라이브러리 파일이 있는 경로를 등록합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;LD_LIBRARY_PATH&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;/usr/local/lib64
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;헤더파일-설치&#34;&gt;헤더파일 설치&lt;/h3&gt;
+&lt;p&gt;libpcapi.so 파일을 사용하여 컴파일하는 애플리케이션의 실행 환경에 따라 PcAPIL.h 헤더 파일을 설치하여 사용합니다. 경로는 사용자 환경에 맞추어 사용하면 됩니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ cp PcAPIL.h /usr/local/include
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;컴파일&#34;&gt;컴파일&lt;/h2&gt;
+&lt;p&gt;Petra Cipher 라이브러리를 사용하기 위해서는, 해당 라이브러리를 사용하는 애플리케이션에서 컴파일 시 필요한 옵션을 지정해주어야 합니다.&lt;/p&gt;
+&lt;h3 id=&#34;라이브러리-링크-옵션-설정&#34;&gt;라이브러리 링크 옵션 설정&lt;/h3&gt;
+&lt;p&gt;libpcapi.so를 사용하는 프로그램을 컴파일하기 위해서는 -lpcapi 옵션을 사용하여 라이브러리를 링크해야 합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcc -o program program.c -lpcapi
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;위 명령어에서 -o 옵션은 출력 파일 이름을 설정하며, program.c는 컴파일할 소스 코드 파일 이름을 의미합니다.&lt;/p&gt;
+&lt;h3 id=&#34;라이브러리-경로-설정&#34;&gt;라이브러리 경로 설정&lt;/h3&gt;
+&lt;p&gt;libpcapi.so 라이브러리를 사용하는 경우, 컴파일러가 라이브러리를 찾을 수 있도록 라이브러리 경로를 설정해야 합니다. 이를 위해서는 -L 옵션을 사용하여 라이브러리가 설치된 경로를 지정합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcc -L/usr/local/lib64 -o program program.c -lpcapi
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;위 명령어에서 -L 옵션은 라이브러리 경로를 설정하며, 그 뒤의 /usr/local/lib64 경로는 libpcapi.so 라이브러리가 설치된 경로입니다.&lt;/p&gt;
+&lt;h3 id=&#34;헤더-경로-설정&#34;&gt;헤더 경로 설정&lt;/h3&gt;
+&lt;p&gt;컴파일러가 헤더파일을 찾을 수 있도록 헤더파일 경로를 설정해야 합니다. 이를 위해서는 -i 옵션을 사용하여 라이브러리가 설치된 경로를 지정합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;gcc -I/usr/local/include -L/usr/local/lib64 -o program program.c -lpcapi
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;위 명령어에서 -I 옵션은 헤더파일 경로를 설정하며, 그 뒤의 /usr/local/include 경로는 PcAPIL.h 헤더파일이 설치된 경로입니다.&lt;/p&gt;
+&lt;h3 id=&#34;프로그램-실행&#34;&gt;프로그램 실행&lt;/h3&gt;
+&lt;p&gt;program 실행 파일을 생성하고 실행합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;./program
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;위 명령어를 실행하면 program 프로그램이 실행됩니다. 
+단, 프로그램에서 암복호화 함수 호출을 위해 반드시 서버에 구성 파일을 작성해두어야 합니다. 구성 파일의 설정 방법은 아래와 같습니다.&lt;/p&gt;
+&lt;h2 id=&#34;구성-파일-설정&#34;&gt;구성 파일 설정&lt;/h2&gt;
+&lt;p&gt;본 프로그램을 실행하기 위해선 페트라 싸이퍼 키 서버 정보가 저장 된 구성 파일을 필요로합니다. 
+구성 파일은 소스코드 내부에서 초기화 함수로 특별히 지정하지 않으면 “/var/tmp/.petra/petra_cipher_api.conf” 기본 경로를 사용합니다.&lt;/p&gt;
+&lt;h3 id=&#34;자격-증명-값-생성&#34;&gt;자격 증명 값 생성&lt;/h3&gt;
+&lt;p&gt;구성 파일 작성을 위해 우선 키 서버에서 자격 증명 값을 생성해야 합니다. 자격 증명 값은 키 서버에서 pcp_credentials 바이너리를 통해 생성할 수 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ pcp_credentials generate -svc demo -user dgadmin -password abc -&lt;span style=&#34;color:#ff79c6&#34;&gt;[&lt;/span&gt;key|svc_home&lt;span style=&#34;color:#ff79c6&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;옵션&#34;&gt;옵션&lt;/h4&gt;
+&lt;h5 id=&#34;-svc-soha_svc&#34;&gt;-svc SOHA_SVC&lt;/h5&gt;
+&lt;p&gt;SOHA_SVC는 페트라 싸이퍼 인 메모리 데이터베이스 SOHA DBMS의 서비스  이름입니다. 페트라 싸이퍼 설치 계정에서  env | grep SOHA_SVC 를 통해 값을 확인할 수 있습니다.&lt;/p&gt;
+&lt;h5 id=&#34;-user-soha_user&#34;&gt;-user soha_user&lt;/h5&gt;
+&lt;p&gt;SOHA DBMS의 접속 계정입니다. 기본값으로 dgadmin을 사용합니다.&lt;/p&gt;
+&lt;h5 id=&#34;-password-soha_password&#34;&gt;-password soha_password&lt;/h5&gt;
+&lt;p&gt;SOHA DBMS 계정의 비밀번호입니다. 기본값으로 petra@one1을 사용합니다.&lt;/p&gt;
+&lt;h5 id=&#34;-key-credentials_password-선택&#34;&gt;-key [=credentials_password] (선택)&lt;/h5&gt;
+&lt;p&gt;생성하려는 자격 증명 값에 대한 비밀번호입니다. 만약 자격 증명 값을 생성할 때 비밀번호를 사용하면 라이브러리를 사용하는 프로그램에서 반드시 초기화 함수를 사용해 자격 증명 값 비밀번호를 입력해야 합니다. 선택할 수 있는 값으로 사용하지 않으면 비밀번호를 사용하지 않습니다.&lt;/p&gt;
+&lt;h5 id=&#34;-soha_home-soha_home-선택&#34;&gt;-soha_home [=SOHA_HOME] (선택)&lt;/h5&gt;
+&lt;p&gt;로컬 키 서버를 사용하기 위해  설정할 수 있는 SOHA DBMS의 설치 경로입니다. 페트라 싸이퍼 설치 계정에서 env | grep SOHA_HOME 으로 확인할 수 있습니다. 응용 프로그램과 같은 서버에 설치 된 키 서버에 프로세스 파이프 통신을 통해 보다 빠른 속도로 키 데이터를 얻어오는 구성을 사용할 때 선택할 수 있는 값입니다. 옵션을 사용하기 위해 구성 파일에서 키 서버 호스트 값을 &amp;ldquo;LOCAL&amp;quot;로 설정해야 합니다.&lt;/p&gt;
+&lt;p&gt;다음과 같이 생성할 수 있습니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ env | grep SOHA_SVC
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;SOHA_SVC&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;keysvr
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ pcp_credentials generate -svc keysvr -user dgadmin -password petra@one1
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;credentials&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;&amp;gt; Y8UdAzNpEDbO8bvMK5ez2W+buNUO8dShCJYgGO84B6y/waMSyTL/RdXzU1d39Pd0PfhNQZEw4LRHKJm5ySPN0kz+DGu/IGKAWbepbG9EgycA&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;AYQA
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;구성파일-생성&#34;&gt;구성파일 생성&lt;/h3&gt;
+&lt;p&gt;구성 파일을 다음과 같이 작성할 수 있습니다. 먼저 vi를 통해 기본 경로인 “/var/tmp/.petra/petra_cipher_api.conf” 파일을 열어줍니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;vi /var/tmp/.petra/petra_cipher_api.conf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;다음과 같이 키 서버 정보를 입력합니다.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;keysvr.primary.host &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; 192.168.10.94
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;keysvr.primary.port &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;6002&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;keysvr.primary.credentials &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; Y8UdAzNpEDbO8bvMK5ez2W+buNUO8dShCJYgGO84B6y/waMSyTL/RdXzU1d39Pd0PfhNQZEw4LRHKJm5ySPN0kz+DGu/IGKAWbepbG9EgycA&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;AYQA
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;페트라 싸이퍼의 구성 정보 파일은 다양한 옵션이 사용될 수 있습니다. 아래는 구성 파일에 사용할 수 있는 옵션들에 대한 설명입니다.&lt;/p&gt;
+&lt;h4 id=&#34;필수-설정&#34;&gt;필수 설정&lt;/h4&gt;
+&lt;h5 id=&#34;keysvrprimaryhost&#34;&gt;keysvr.primary.host&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 기본 키 서버의 호스트 IP 주소를 지정합니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrprimaryport&#34;&gt;keysvr.primary.port&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 기본 키 서버의 KRED(Key Request Encrypt Decrypt)포트 번호를 지정합니다. SOHA_HOME 경로의 config/listener.list 파일에서 client_type=kred 로 설정 된 포트 값을 입력하면 됩니다. 혹은 페트라 싸이퍼 설치 계정에서 “. ~/_profile” 실행 후 키 서버 선택 한 상태에서 “petractl status” 명령어로 상태 확인 시 3번째 포트번호입니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrprimarycredentials&#34;&gt;keysvr.primary.credentials&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 기본 키 서버의 자격 증명을 지정합니다.&lt;/p&gt;
+&lt;h4 id=&#34;선택-설정&#34;&gt;선택 설정&lt;/h4&gt;
+&lt;hr&gt;
+&lt;p&gt;키 서버 설정&lt;/p&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;keysvrprimarycon_timeout--5&#34;&gt;keysvr.primary.con_timeout  [=5]&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 기본 키 서버의 연결 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrprimaryin_timeout--5&#34;&gt;keysvr.primary.in_timeout  [=5]&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 기본 키 서버의 입력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrprimaryout_timeout--5&#34;&gt;keysvr.primary.out_timeout  [=5]&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 기본 키 서버의 출력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrsecondaryhost&#34;&gt;keysvr.secondary.host&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 보조 키 서버의 호스트 IP 주소를 지정합니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrsecondaryport&#34;&gt;keysvr.secondary.port&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 보조 키 서버의 KRED(Key Request Encrypt Decrypt) 포트 번호를 지정합니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrsecondarycredentials&#34;&gt;keysvr.secondary.credentials&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 보조 키 서버의 자격 증명을 지정합니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrsecondarycon_timeout--5&#34;&gt;keysvr.secondary.con_timeout  [=5]&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 보조 키 서버의 연결 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrsecondaryin_timeout--5&#34;&gt;keysvr.secondary.in_timeout  [=5]&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 보조 키 서버의 입력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrsecondaryout_timeout--5&#34;&gt;keysvr.secondary.out_timeout  [=5]&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 보조 키 서버의 출력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrthirdhost&#34;&gt;keysvr.third.host&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 세 번째 키 서버의 호스트 IP 주소를 지정합니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrthirdport&#34;&gt;keysvr.third.port&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 세 번째 키 서버의 KRED(Key Request Encrypt Decrypt) 포트 번호를 지정합니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrthirdcredentials&#34;&gt;keysvr.third.credentials&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 세 번째 키 서버의 자격 증명을 지정합니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrthirdcon_timeout--5&#34;&gt;keysvr.third.con_timeout  [=5]&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 세 번째 키 서버의 연결 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrthirdin_timeout--5&#34;&gt;keysvr.third.in_timeout  [=5]&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 세 번째 키 서버의 입력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p&gt;
+&lt;h5 id=&#34;keysvrthirdout_timeout--5&#34;&gt;keysvr.third.out_timeout  [=5]&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 세 번째 키 서버의 출력 시간 초과 값을 지정합니다. 단위는 초 입니다. 설정하지 않을 시 기본값은 5 입니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;로그 관련 설정&lt;/p&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;trace_level--0&#34;&gt;trace_level  [=0]&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 로그 덤프 레벨을 설정합니다. 0 혹은 10의 값으로 사용합니다. 0 값은 장애 로그만 출력되며, 10의 값은 분석을 위한 상세 로그 데이터를 출력합니다.&lt;/p&gt;
+&lt;h5 id=&#34;log_file_path--tmppetra_cipher_apilog&#34;&gt;log_file_path  [=/tmp/petra_cipher_api.log]&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 로그 파일의 경로를 지정합니다.&lt;/p&gt;
+&lt;h5 id=&#34;same_err_no_log_interval--0&#34;&gt;same_err_no_log_interval  [=0]&lt;/h5&gt;
+&lt;p&gt;이 파라미터는 동일한 오류 번호가 발생한 경우 로그에 기록되는 간격을 지정합니다. 단위는 초 입니다. 로그가 빈번하게 발생한다면 해당 값을 30 정도로 설정합니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;기타 설정&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;ip_prob_cmd_path  [= /usr/bin/who]
+이 파라미터는 IP 주소를 검색하는 데 사용되는 명령어의 경로를 지정합니다. 세션을 얻을 때 IP 값을 사용하지 않으면 이 명령어로 IP를 추출하여 사용합니다. 
+keysvr.sessions  [=1]
+이 파라미터는 키 서버로 연결되는 최대 세션 수를 지정합니다. 일반적으로 1 이상의 값을 필요로 하지 않습니다. 
+num_shared_session  [=1]
+이 파라미터는 공유 세션의 수를 지정합니다.&lt;/p&gt;
+&lt;h2 id=&#34;샘플-테스트&#34;&gt;샘플 테스트&lt;/h2&gt;
+&lt;h3 id=&#34;테스트-디렉토리-구조&#34;&gt;테스트 디렉토리 구조&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ tree
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|-- include
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|   &lt;span style=&#34;color:#f1fa8c&#34;&gt;`&lt;/span&gt;-- PcAPIL.h
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|-- lib64
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|   &lt;span style=&#34;color:#f1fa8c&#34;&gt;`&lt;/span&gt;-- libpcapi.so
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;`&lt;/span&gt;-- program.c
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;구성-파일&#34;&gt;구성 파일&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ cat /var/tmp/.petra/petra_cipher_api.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;keysvr.primary.host &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; 192.168.10.94
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;keysvr.primary.port &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;6002&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;keysvr.primary.credentials &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; Y8UdAzNpEDbO8bvMK5ez2W+buNUO8dShCJYgGO84B6y/waMSyTL/RdXzU1d39Pd0PfhNQZEw4LRHKJm5ySPN0kz+DGu/IGKAWbepbG9EgycA&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;AYQA
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;소스코드&#34;&gt;소스코드&lt;/h3&gt;
+&lt;p&gt;vi program.c&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;stdlib.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;string.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;PcAPIL.h&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#define MAX_TEXT_LENGTH 1024
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; argc, &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;argv[])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#6272a4&#34;&gt;// Initialize Petra Cipher library with configuration file path.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#6272a4&#34;&gt;// Note: This function is optional. If not called, default values will be used.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    PcAPI_initialize(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;/var/tmp/.petra/petra_cipher_api.conf&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#6272a4&#34;&gt;// Initialize variables for encryption and decryption.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; encryptText[MAX_TEXT_LENGTH];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; decryptText[MAX_TEXT_LENGTH];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#6272a4&#34;&gt;// Get session ID from key server.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; sid &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; PcAPI_getSession(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (sid &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        printf(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Failed to get session ID.&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#6272a4&#34;&gt;// Set encryption key name and plain text for encryption.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;keyName &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;AES_256_b64&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;plainText &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sinsiway petra cipher&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; plainTextLen &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; strlen(plainText);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; encryptTextLen &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; MAX_TEXT_LENGTH;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; decryptTextLen &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; MAX_TEXT_LENGTH;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#6272a4&#34;&gt;// Initialize encryption and decryption buffers.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    memset(encryptText, &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;, encryptTextLen);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    memset(decryptText, &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;, decryptTextLen);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#6272a4&#34;&gt;// Encrypt plain text using Petra Cipher library.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; rtn &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; PcAPI_encrypt_name(sid, keyName, (&lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;)plainText, plainTextLen, encryptText, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;amp;&lt;/span&gt;encryptTextLen);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (rtn &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        printf(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Encryption failed with error code %d.&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;, rtn);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#6272a4&#34;&gt;// Decrypt encrypted text using Petra Cipher library.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    rtn &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; PcAPI_decrypt_name(sid, keyName, encryptText, encryptTextLen, decryptText, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;amp;&lt;/span&gt;decryptTextLen);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;if&lt;/span&gt; (rtn &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        printf(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Decryption failed with error code %d.&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;, rtn);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#bd93f9&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    decryptText[decryptTextLen] &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#39;\0&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#6272a4&#34;&gt;// Print original, encrypted, and decrypted texts.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;&lt;/span&gt;    printf(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Original text: %s&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;, plainText);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    printf(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Encrypted text: %s&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;, encryptText);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    printf(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Decrypted text: %s&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&lt;/span&gt;, decryptText);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;소스코드-컴파일&#34;&gt;소스코드 컴파일&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ gcc -I./include -L./lib64 -o program -g program.c -lpcapi
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;바이너리-실행&#34;&gt;바이너리 실행&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;LD_LIBRARY_PATH&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;./lib64
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ./program
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Original text: sinsiway petra cipher
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Encrypted text: vcUVmF09LkxN77fLiNlDVt+nXFhMJNhcivegvUzKKmA&lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Decrypted text: sinsiway petra cipher
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: PcAPI_initialize → void</title>
+      <link>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-initilize/</link>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-initilize/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;PcAPIL.h&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;PcAPI_initialize&lt;/span&gt;(&lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;info_file_path, &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;credentials_pw);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h3&gt;
+&lt;p&gt;PcAPI_initialize 함수는 libpcapi.so 라이브러리를 사용하기 위한 구성 파일을 설정합니다. 구성 파일은 키 관리 서버 설정과 인증에 필요한 자격 증명 정보 등을 포함하고 있습니다.
+함수의 info_file_path 매개변수에는 구성 파일의 전체 경로와 파일명을 입력해야 하며, credentials_pw 매개변수에는 자격 증명 비밀번호를 입력해야 합니다. 이 비밀번호는 info_file_path 파일의 내용 중 credentials 값을 발급할 때 사용한 비밀번호와 동일해야 합니다. 만약 비밀번호를 사용하지 않았다면 빈 값(&amp;quot;&amp;quot;)을 입력하면 됩니다.&lt;/p&gt;
+&lt;p&gt;함수가 호출되지 않았을 때 기본적으로 읽어오는 경로는 &amp;ldquo;/var/tmp/.petra/petra_cipher_api.conf&amp;rdquo; 이며, 비밀번호는 사용되지 않습니다.&lt;/p&gt;
+&lt;p&gt;자세한 정보는 &amp;ldquo;&lt;a href=&#34;../../get-started/installation/linux/#%EA%B5%AC%EC%84%B1-%ED%8C%8C%EC%9D%BC-%EC%84%A4%EC%A0%95&#34;&gt;설치 가이드 - 구성 파일&lt;/a&gt;&amp;rdquo; 부분을 참고하시기 바랍니다.&lt;/p&gt;
+&lt;h3 id=&#34;return-value&#34;&gt;RETURN VALUE&lt;/h3&gt;
+&lt;p&gt;성공 시 &lt;strong&gt;0&lt;/strong&gt;을 반환합니다.&lt;/p&gt;
+&lt;p&gt;오류가 발생하면 0 보다 작은 &lt;a href=&#34;../../../error-codes&#34;&gt;에러 코드&lt;/a&gt;를 반환합니다.&lt;/p&gt;
+&lt;h3 id=&#34;errors&#34;&gt;ERRORS&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;../../../error-codes/#-30315&#34;&gt;-30315&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30316&#34;&gt;-30316&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30502&#34;&gt;-30502&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30511&#34;&gt;-30511&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;note&#34;&gt;NOTE&lt;/h3&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+
+
+    일반적으로 &lt;strong&gt;PcAPI_initialize()&lt;/strong&gt; 함수는 기본 경로인 &lt;strong&gt;/var/tmp/.petra/petra_cipher_api.conf 를 사용할 수 있을 경우 호출하지 않고 기본 경로를 사용합니다.&lt;/strong&gt; 
 예외적으로 시스템 보안 솔루션 혹은 정책에 따라 /var/tmp 에 대한 사용 권한을 얻지 못하거나 주기적으로 /var/tmp 이하 파일을 자동으로 제거하는 솔루션이 동작하는 등 /var/tmp 경로를 사용하기 어려운 환경에서만 사용됩니다.
-&lt;/div></description></item><item><title>Docs: PcAPI_getSession → int</title><link>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-getsession/</link><pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-getsession/</guid><description>
-&lt;h3 id="synopsis">SYNOPSIS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;#34;PcAPIL.h&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#50fa7b">PcAPI_getSession&lt;/span>(&lt;span style="color:#ff79c6">const&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span>&lt;span style="color:#ff79c6">*&lt;/span> client_ip);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="description">DESCRIPTION&lt;/h3>
-&lt;p>&lt;strong>PcAPI_getSession&lt;/strong> 함수는 인자로 전달받은 &lt;strong>client_ip&lt;/strong>를 해시 스트링으로 변환한 후, 이를 이용하여 키 서버 세션 풀에서 세션을 찾습니다.&lt;/p>
-&lt;p>만약 기존 세션이 존재하면, 기존 세션을 반환하고, 세션 풀에 세션이 존재하지 않을 경우 새로운 세션을 생성하여 &lt;strong>세션 ID&lt;/strong>를 나타내는 &lt;strong>signed 32-bit 정수&lt;/strong>를 반환합니다. 반환된 세션 ID는 암/복호화에서 사용됩니다.&lt;/p>
-&lt;p>또한, 반환된 세션 ID는 서버 측에서 로깅 및 감사 목적으로 사용될 수 있습니다. 이를 통해 암호화/복호화에 대한 감사 추적이 가능합니다.&lt;/p>
-&lt;h3 id="return-value">RETURN VALUE&lt;/h3>
-&lt;p>성공 시 세션 ID를 나타내는 &lt;strong>signed 32-bit 정수&lt;/strong>를 반환합니다.&lt;/p>
-&lt;p>오류가 발생하면 0 보다 작은 &lt;a href="../../../error-codes">에러 코드&lt;/a>를 반환합니다.&lt;/p>
-&lt;h3 id="errors">ERRORS&lt;/h3>
-&lt;p>&lt;a href="../../../error-codes/#-30309">-30309&lt;/a>, &lt;a href="../../../error-codes/#-30310">-30310&lt;/a>, &lt;a href="../../../error-codes/#-30312">-30312&lt;/a>, &lt;a href="../../../error-codes/#-30315">-30315&lt;/a>, &lt;a href="../../../error-codes/#-30316">-30316&lt;/a>, &lt;a href="../../../error-codes/#-30340">-30340&lt;/a>, &lt;a href="../../../error-codes/#-30341">-30341&lt;/a>, &lt;a href="../../../error-codes/#-30342">-30342&lt;/a>, &lt;a href="../../../error-codes/#-30343">-30343&lt;/a>, &lt;a href="../../../error-codes/#-30344">-30344&lt;/a>&lt;/p></description></item><item><title>Docs: PcAPI_encrypt_name → int</title><link>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-encrypt-name/</link><pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-encrypt-name/</guid><description>
-&lt;h3 id="synopsis">SYNOPSIS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;#34;PcAPIL.h&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#50fa7b">PcAPI_encrypt_name&lt;/span>(
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> api_sid,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">const&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>enc_col_name,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>src,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> src_len,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>dst,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>dst_len
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="description">DESCRIPTION&lt;/h3>
-&lt;p>&lt;strong>PcAPI_encrypt_name&lt;/strong> 함수는 Petra Cipher Key Server에서 생성한 암호화 컬럼의 이름인 &lt;strong>enc_col_name&lt;/strong>과 소스 데이터인 &lt;strong>src&lt;/strong>를 입력받아, 소스 데이터를 해당 암호화 컬럼을 사용하여 암호화하는 기능을 제공합니다.&lt;/p>
-&lt;p>&lt;strong>api_sid&lt;/strong> 에는 &lt;strong>PcAPI_getSession&lt;/strong> 함수를 호출하여 반환된 &lt;strong>세션 ID&lt;/strong>가 전달되어야 합니다. 세션 ID는 Petra Cipher Key Server와의 통신에 사용되며 사용하려는 키에 대한 접근 권한이나 감사데이터에서 사용자 구분 등에 사용됩니다.&lt;/p>
-&lt;p>함수의 실행 결과로는 암호화 된 데이터가 &lt;strong>dst&lt;/strong> 버퍼에 저장되며, 암호화 된 데이터의 길이가 &lt;strong>dst_len&lt;/strong> 매개변수에 저장됩니다. dst_len은 dst 버퍼의 크기만큼 전달되어야 하며, 최소한 src_len보다는 크도록 해야합니다. &lt;strong>일반적으로 dst 버퍼의 크기는 src 버퍼의 2배 정도 크기로 충분하게 사용됩니다.&lt;/strong>&lt;/p>
-&lt;p>다만, PcAPI_encrypt_name 실행 후에 dst 버퍼에서 암호화 된 데이터 끝에 마지막 값이 없기 때문에 dst에서 dst_len 길이 만큼 잘라서 사용하거나 dst 버퍼를 바로 사용하려면 &lt;code>dst[dst_len] ='\0'&lt;/code> 형태로 데이터의 마지막을 표현해주어야 합니다.&lt;/p>
-&lt;h3 id="return-value">RETURN VALUE&lt;/h3>
-&lt;p>성공 시 0을 반환합니다.&lt;/p>
-&lt;p>오류가 발생하면 0 보다 작은 &lt;a href="../../../error-codes">에러 코드&lt;/a>를 반환합니다.&lt;/p>
-&lt;h3 id="errors">ERRORS&lt;/h3>
-&lt;p>&lt;a href="../../../error-codes/#-30101">-30101&lt;/a>, &lt;a href="../../../error-codes/#-30103">-30103&lt;/a>, &lt;a href="../../../error-codes/#-30106">-30106&lt;/a>, &lt;a href="../../../error-codes/#-30115">-30115&lt;/a>, &lt;a href="../../../error-codes/#-30117">-30117&lt;/a>, &lt;a href="../../../error-codes/#-30301">-30301&lt;/a>, &lt;a href="../../../error-codes/#-30302">-30302&lt;/a>, &lt;a href="../../../error-codes/#-30351">-30351&lt;/a>, &lt;a href="../../../error-codes/#-30388">-30388&lt;/a>&lt;/p></description></item><item><title>Docs: PcAPI_decrypt_name → int</title><link>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-decrypt-name/</link><pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-decrypt-name/</guid><description>
-&lt;h3 id="synopsis">SYNOPSIS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;#34;PcAPIL.h&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#50fa7b">PcAPI_decrypt_name&lt;/span>(
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> api_sid,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">const&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>enc_col_name,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>src,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> src_len,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>dst,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>dst_len
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="description">DESCRIPTION&lt;/h3>
-&lt;p>&lt;strong>PcAPI_decrypt_name&lt;/strong> 함수는 Petra Cipher Key Server에서 생성한 암호화 컬럼의 이름인 &lt;strong>enc_col_name&lt;/strong>과 암호화된 데이터인 &lt;strong>src&lt;/strong>를 입력받아, 해당 암호화 컬럼을 사용하여 원본 데이터를 복호화하는 기능을 제공합니다. 주의할 점은, enc_col_name 매개변수는 암호화 함수(&lt;strong>PcAPI_encrypt_name&lt;/strong>)에서 사용했던 &lt;strong>암호화 컬럼의 이름과 동일&lt;/strong>해야 한다는 것입니다. 이를 지키지 않으면 복호화가 실패합니다.&lt;/p>
-&lt;p>&lt;strong>api_sid&lt;/strong>에는 &lt;strong>PcAPI_getSession&lt;/strong> 함수를 호출하여 반환된 &lt;strong>세션 ID&lt;/strong>가 전달되어야 합니다. 세션 ID는 Petra Cipher Key Server와의 통신에 사용되며 사용하려는 키에 대한 접근 권한이나 감사데이터에서 사용자 구분 등에 사용됩니다.&lt;/p>
-&lt;p>함수의 실행 결과로는 복호화된 데이터가 &lt;strong>dst&lt;/strong> 버퍼에 저장되며, 복호화된 데이터의 길이가 &lt;strong>dst_len&lt;/strong> 매개변수에 저장됩니다. dst_len은 dst 버퍼의 크기만큼 전달되어야 하며, 최소한 src_len보다는 크도록 해야합니다. 일반적으로 dst 버퍼의 크기는 src 버퍼의 크기와 동일하게 설정됩니다.
-복호화가 성공하면 dst에는 원본 데이터가 들어가고 dst_len에는 원본 데이터의 길이가 들어가게 됩니다.&lt;/p>
-&lt;p>하지만 PcAPI_decrypt_name 실행 후에 dst 버퍼에서 원본 데이터 끝에 마지막 값이 없기 때문에 dst에서 dst_len 길이 만큼 잘라서 사용하거나 dst 버퍼를 바로 사용하려면 &lt;code>dst[dst_len] ='\0'&lt;/code> 형태로 데이터의 마지막을 표현해주어야 합니다.&lt;/p>
-&lt;h3 id="return-value">RETURN VALUE&lt;/h3>
-&lt;p>성공 시 0을 반환합니다.&lt;/p>
-&lt;p>오류가 발생하면 0 보다 작은 &lt;a href="../../../error-codes">에러 코드&lt;/a>를 반환합니다.&lt;/p>
-&lt;h3 id="errors">ERRORS&lt;/h3>
-&lt;p>&lt;a href="../../../error-codes/#-30101">-30101&lt;/a>, &lt;a href="../../../error-codes/#-30103">-30103&lt;/a>, &lt;a href="../../../error-codes/#-30105">-30105&lt;/a>, &lt;a href="../../../error-codes/#-30106">-30106&lt;/a>, &lt;a href="../../../error-codes/#-30107">-30107&lt;/a>, &lt;a href="../../../error-codes/#-30108">-30108&lt;/a>, &lt;a href="../../../error-codes/#-30111">-30111&lt;/a>, &lt;a href="../../../error-codes/#-30116">-30116&lt;/a>, &lt;a href="../../../error-codes/#-30117">-30117&lt;/a>, &lt;a href="../../../error-codes/#-30118">-30118&lt;/a>, &lt;a href="../../../error-codes/#-30302">-30302&lt;/a>, &lt;a href="../../../error-codes/#-30351">-30351&lt;/a>, &lt;a href="../../../error-codes/#-30388">-30388&lt;/a>, &lt;a href="../../../error-codes/#-30401">-30401&lt;/a>&lt;/p></description></item><item><title>Docs: Implementation</title><link>https://sinsiway-official.github.io/docs/c-cpp/implementation/</link><pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/c-cpp/implementation/</guid><description>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;#34;PcAPIL.h&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#50fa7b">main&lt;/span>(&lt;span style="color:#8be9fd">int&lt;/span> argc, &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">const&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>argv[])
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> encryptText[&lt;span style="color:#bd93f9">1024&lt;/span>];
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> decryptText[&lt;span style="color:#bd93f9">1024&lt;/span>];
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> sid &lt;span style="color:#ff79c6">=&lt;/span> PcAPI_getSession(&lt;span style="color:#f1fa8c">&amp;#34;&amp;#34;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">const&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>keyName &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;ARIA-256-B64&amp;#34;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> rtn &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>plainText &lt;span style="color:#ff79c6">=&lt;/span> (&lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>)&lt;span style="color:#f1fa8c">&amp;#34;sinsiway petra cipher&amp;#34;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">int&lt;/span> encryptTextLen &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">1024&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">int&lt;/span> decryptTextLen &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#bd93f9">1024&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> memset(encryptText, &lt;span style="color:#bd93f9">0&lt;/span>, encryptTextLen);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> memset(decryptText, &lt;span style="color:#bd93f9">0&lt;/span>, decryptTextLen);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rtn &lt;span style="color:#ff79c6">=&lt;/span> PcAPI_encrypt_name(sid, keyName, plainText, strlen((&lt;span style="color:#ff79c6">const&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>)plainText), encryptText, &lt;span style="color:#ff79c6">&amp;amp;&lt;/span>encryptTextLen);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> rtn &lt;span style="color:#ff79c6">=&lt;/span> PcAPI_decrypt_name(sid, keyName, encryptText, encryptTextLen, decryptText, &lt;span style="color:#ff79c6">&amp;amp;&lt;/span>decryptTextLen);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span> &lt;span style="color:#bd93f9">0&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>주어진 예제 소스 코드는 PetraCipher 라이브러리인 &lt;strong>libpcapi.so&lt;/strong>를 사용하여 세션을 얻고 암호화/복호화 함수를 사용하는 방법을 보여주는 예시입니다.&lt;/p>
-&lt;p>소스 코드에서는 PcAPIL.h 헤더 파일을 사용하여 PetraCipher 라이브러리를 호출합니다. &lt;strong>PcAPI_getSession()&lt;/strong> 함수를 사용하여 &lt;strong>세션 ID&lt;/strong>를 얻고, &lt;strong>PcAPI_encrypt_name()&lt;/strong> 및 &lt;strong>PcAPI_decrypt_name()&lt;/strong> 함수를 사용하여 데이터를 암호화하고 복호화합니다.&lt;/p>
-&lt;p>PetraCipher 라이브러리를 사용하려면 먼저 세션을 얻어야하며, 각 함수에서 세션 ID, 암호화 키 이름, 평문 데이터 등을 매개변수로 전달해야합니다.&lt;/p>
-&lt;p>PetraCipher 라이브러리는 데이터 보호 및 안전한 통신을 위해 설계되었으며 다양한 애플리케이션에서 사용할 수 있습니다. 제공된 소스 코드는 라이브러리의 기본 사용법을 보여주며, 더 자세한 정보는 라이브러리의 문서에서 확인할 수 있습니다.&lt;/p></description></item><item><title>Docs: Methods</title><link>https://sinsiway-official.github.io/docs/c-cpp/methods/</link><pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/c-cpp/methods/</guid><description/></item></channel></rss>
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: PcAPI_getSession → int</title>
+      <link>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-getsession/</link>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-getsession/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;PcAPIL.h&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;PcAPI_getSession&lt;/span&gt;(&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt; client_ip);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;PcAPI_getSession&lt;/strong&gt; 함수는 인자로 전달받은 &lt;strong&gt;client_ip&lt;/strong&gt;를 해시 스트링으로 변환한 후, 이를 이용하여 키 서버 세션 풀에서 세션을 찾습니다.&lt;/p&gt;
+&lt;p&gt;만약 기존 세션이 존재하면, 기존 세션을 반환하고, 세션 풀에 세션이 존재하지 않을 경우 새로운 세션을 생성하여 &lt;strong&gt;세션 ID&lt;/strong&gt;를 나타내는 &lt;strong&gt;signed 32-bit 정수&lt;/strong&gt;를 반환합니다. 반환된 세션 ID는 암/복호화에서 사용됩니다.&lt;/p&gt;
+&lt;p&gt;또한, 반환된 세션 ID는 서버 측에서 로깅 및 감사 목적으로 사용될 수 있습니다. 이를 통해 암호화/복호화에 대한 감사 추적이 가능합니다.&lt;/p&gt;
+&lt;h3 id=&#34;return-value&#34;&gt;RETURN VALUE&lt;/h3&gt;
+&lt;p&gt;성공 시 세션 ID를 나타내는 &lt;strong&gt;signed 32-bit 정수&lt;/strong&gt;를 반환합니다.&lt;/p&gt;
+&lt;p&gt;오류가 발생하면 0 보다 작은 &lt;a href=&#34;../../../error-codes&#34;&gt;에러 코드&lt;/a&gt;를 반환합니다.&lt;/p&gt;
+&lt;h3 id=&#34;errors&#34;&gt;ERRORS&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;../../../error-codes/#-30309&#34;&gt;-30309&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30310&#34;&gt;-30310&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30312&#34;&gt;-30312&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30315&#34;&gt;-30315&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30316&#34;&gt;-30316&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30340&#34;&gt;-30340&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30341&#34;&gt;-30341&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30342&#34;&gt;-30342&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30343&#34;&gt;-30343&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30344&#34;&gt;-30344&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: PcAPI_encrypt_name → int</title>
+      <link>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-encrypt-name/</link>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-encrypt-name/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;PcAPIL.h&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;PcAPI_encrypt_name&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; api_sid,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;enc_col_name,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;src,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; src_len,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;dst,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;dst_len
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;PcAPI_encrypt_name&lt;/strong&gt; 함수는 Petra Cipher Key Server에서 생성한 암호화 컬럼의 이름인 &lt;strong&gt;enc_col_name&lt;/strong&gt;과 소스 데이터인 &lt;strong&gt;src&lt;/strong&gt;를 입력받아, 소스 데이터를 해당 암호화 컬럼을 사용하여 암호화하는 기능을 제공합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;api_sid&lt;/strong&gt; 에는 &lt;strong&gt;PcAPI_getSession&lt;/strong&gt; 함수를 호출하여 반환된 &lt;strong&gt;세션 ID&lt;/strong&gt;가 전달되어야 합니다. 세션 ID는 Petra Cipher Key Server와의 통신에 사용되며 사용하려는 키에 대한 접근 권한이나 감사데이터에서 사용자 구분 등에 사용됩니다.&lt;/p&gt;
+&lt;p&gt;함수의 실행 결과로는 암호화 된 데이터가 &lt;strong&gt;dst&lt;/strong&gt; 버퍼에 저장되며, 암호화 된 데이터의 길이가 &lt;strong&gt;dst_len&lt;/strong&gt; 매개변수에 저장됩니다. dst_len은 dst 버퍼의 크기만큼 전달되어야 하며, 최소한 src_len보다는 크도록 해야합니다. &lt;strong&gt;일반적으로 dst 버퍼의 크기는 src 버퍼의 2배 정도 크기로 충분하게 사용됩니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;다만, PcAPI_encrypt_name 실행 후에 dst 버퍼에서 암호화 된 데이터 끝에 마지막 값이 없기 때문에 dst에서 dst_len 길이 만큼 잘라서 사용하거나 dst 버퍼를 바로 사용하려면 &lt;code&gt;dst[dst_len] =&#39;\0&#39;&lt;/code&gt; 형태로 데이터의 마지막을 표현해주어야 합니다.&lt;/p&gt;
+&lt;h3 id=&#34;return-value&#34;&gt;RETURN VALUE&lt;/h3&gt;
+&lt;p&gt;성공 시 0을 반환합니다.&lt;/p&gt;
+&lt;p&gt;오류가 발생하면 0 보다 작은 &lt;a href=&#34;../../../error-codes&#34;&gt;에러 코드&lt;/a&gt;를 반환합니다.&lt;/p&gt;
+&lt;h3 id=&#34;errors&#34;&gt;ERRORS&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;../../../error-codes/#-30101&#34;&gt;-30101&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30103&#34;&gt;-30103&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30106&#34;&gt;-30106&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30115&#34;&gt;-30115&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30117&#34;&gt;-30117&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30301&#34;&gt;-30301&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30302&#34;&gt;-30302&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30351&#34;&gt;-30351&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30388&#34;&gt;-30388&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: PcAPI_decrypt_name → int</title>
+      <link>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-decrypt-name/</link>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/c-cpp/methods/c-api-pcapi-decrypt-name/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;PcAPIL.h&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;PcAPI_decrypt_name&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; api_sid,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;enc_col_name,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;src,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; src_len,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;dst,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;dst_len
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;PcAPI_decrypt_name&lt;/strong&gt; 함수는 Petra Cipher Key Server에서 생성한 암호화 컬럼의 이름인 &lt;strong&gt;enc_col_name&lt;/strong&gt;과 암호화된 데이터인 &lt;strong&gt;src&lt;/strong&gt;를 입력받아, 해당 암호화 컬럼을 사용하여 원본 데이터를 복호화하는 기능을 제공합니다. 주의할 점은, enc_col_name 매개변수는 암호화 함수(&lt;strong&gt;PcAPI_encrypt_name&lt;/strong&gt;)에서 사용했던 &lt;strong&gt;암호화 컬럼의 이름과 동일&lt;/strong&gt;해야 한다는 것입니다. 이를 지키지 않으면 복호화가 실패합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;api_sid&lt;/strong&gt;에는 &lt;strong&gt;PcAPI_getSession&lt;/strong&gt; 함수를 호출하여 반환된 &lt;strong&gt;세션 ID&lt;/strong&gt;가 전달되어야 합니다. 세션 ID는 Petra Cipher Key Server와의 통신에 사용되며 사용하려는 키에 대한 접근 권한이나 감사데이터에서 사용자 구분 등에 사용됩니다.&lt;/p&gt;
+&lt;p&gt;함수의 실행 결과로는 복호화된 데이터가 &lt;strong&gt;dst&lt;/strong&gt; 버퍼에 저장되며, 복호화된 데이터의 길이가 &lt;strong&gt;dst_len&lt;/strong&gt; 매개변수에 저장됩니다. dst_len은 dst 버퍼의 크기만큼 전달되어야 하며, 최소한 src_len보다는 크도록 해야합니다. 일반적으로 dst 버퍼의 크기는 src 버퍼의 크기와 동일하게 설정됩니다.
+복호화가 성공하면 dst에는 원본 데이터가 들어가고 dst_len에는 원본 데이터의 길이가 들어가게 됩니다.&lt;/p&gt;
+&lt;p&gt;하지만 PcAPI_decrypt_name 실행 후에 dst 버퍼에서 원본 데이터 끝에 마지막 값이 없기 때문에 dst에서 dst_len 길이 만큼 잘라서 사용하거나 dst 버퍼를 바로 사용하려면 &lt;code&gt;dst[dst_len] =&#39;\0&#39;&lt;/code&gt; 형태로 데이터의 마지막을 표현해주어야 합니다.&lt;/p&gt;
+&lt;h3 id=&#34;return-value&#34;&gt;RETURN VALUE&lt;/h3&gt;
+&lt;p&gt;성공 시 0을 반환합니다.&lt;/p&gt;
+&lt;p&gt;오류가 발생하면 0 보다 작은 &lt;a href=&#34;../../../error-codes&#34;&gt;에러 코드&lt;/a&gt;를 반환합니다.&lt;/p&gt;
+&lt;h3 id=&#34;errors&#34;&gt;ERRORS&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;../../../error-codes/#-30101&#34;&gt;-30101&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30103&#34;&gt;-30103&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30105&#34;&gt;-30105&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30106&#34;&gt;-30106&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30107&#34;&gt;-30107&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30108&#34;&gt;-30108&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30111&#34;&gt;-30111&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30116&#34;&gt;-30116&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30117&#34;&gt;-30117&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30118&#34;&gt;-30118&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30302&#34;&gt;-30302&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30351&#34;&gt;-30351&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30388&#34;&gt;-30388&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30401&#34;&gt;-30401&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Implementation</title>
+      <link>https://sinsiway-official.github.io/docs/c-cpp/implementation/</link>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/c-cpp/implementation/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;PcAPIL.h&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; argc, &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;argv[])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; encryptText[&lt;span style=&#34;color:#bd93f9&#34;&gt;1024&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; decryptText[&lt;span style=&#34;color:#bd93f9&#34;&gt;1024&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; sid &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; PcAPI_getSession(&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;keyName &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ARIA-256-B64&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; rtn &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;plainText &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;)&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;sinsiway petra cipher&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; encryptTextLen &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;1024&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; decryptTextLen &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;1024&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    memset(encryptText, &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;, encryptTextLen);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    memset(decryptText, &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;, decryptTextLen);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    rtn &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; PcAPI_encrypt_name(sid, keyName, plainText, strlen((&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;)plainText), encryptText, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;amp;&lt;/span&gt;encryptTextLen);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    rtn &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; PcAPI_decrypt_name(sid, keyName, encryptText, encryptTextLen, decryptText, &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;amp;&lt;/span&gt;decryptTextLen);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#bd93f9&#34;&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;주어진 예제 소스 코드는 PetraCipher 라이브러리인 &lt;strong&gt;libpcapi.so&lt;/strong&gt;를 사용하여 세션을 얻고 암호화/복호화 함수를 사용하는 방법을 보여주는 예시입니다.&lt;/p&gt;
+&lt;p&gt;소스 코드에서는 PcAPIL.h 헤더 파일을 사용하여 PetraCipher 라이브러리를 호출합니다. &lt;strong&gt;PcAPI_getSession()&lt;/strong&gt; 함수를 사용하여 &lt;strong&gt;세션 ID&lt;/strong&gt;를 얻고, &lt;strong&gt;PcAPI_encrypt_name()&lt;/strong&gt; 및 &lt;strong&gt;PcAPI_decrypt_name()&lt;/strong&gt; 함수를 사용하여 데이터를 암호화하고 복호화합니다.&lt;/p&gt;
+&lt;p&gt;PetraCipher 라이브러리를 사용하려면 먼저 세션을 얻어야하며, 각 함수에서 세션 ID, 암호화 키 이름, 평문 데이터 등을 매개변수로 전달해야합니다.&lt;/p&gt;
+&lt;p&gt;PetraCipher 라이브러리는 데이터 보호 및 안전한 통신을 위해 설계되었으며 다양한 애플리케이션에서 사용할 수 있습니다. 제공된 소스 코드는 라이브러리의 기본 사용법을 보여주며, 더 자세한 정보는 라이브러리의 문서에서 확인할 수 있습니다.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Methods</title>
+      <link>https://sinsiway-official.github.io/docs/c-cpp/methods/</link>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/c-cpp/methods/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,1 +1,18 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sinsiway Docs – Error Codes</title><link>https://sinsiway-official.github.io/en/docs/error-codes/</link><description>Recent content in Error Codes on Sinsiway Docs</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://sinsiway-official.github.io/en/docs/error-codes/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sinsiway Docs – Error Codes</title>
+    <link>https://sinsiway-official.github.io/en/docs/error-codes/</link>
+    <description>Recent content in Error Codes on Sinsiway Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="https://sinsiway-official.github.io/en/docs/error-codes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>

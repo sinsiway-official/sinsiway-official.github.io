@@ -1,72 +1,147 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sinsiway Docs – Methods</title><link>https://sinsiway-official.github.io/en/docs/c-cpp/methods/</link><description>Recent content in Methods on Sinsiway Docs</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://sinsiway-official.github.io/en/docs/c-cpp/methods/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: PcAPI_initialize → void</title><link>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-initilize/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-initilize/</guid><description>
-&lt;h3 id="synopsis">SYNOPSIS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;#34;PcAPIL.h&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#50fa7b">PcAPI_initialize&lt;/span>(&lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>info_file_path, &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>credentials_pw);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="description">DESCRIPTION&lt;/h3>
-&lt;p>The &lt;strong>PcAPI_initialize&lt;/strong> function sets up the configuration file required to use the &lt;strong>libpcapi.so&lt;/strong> library. The configuration file contains information such as the key management server settings and the credentials needed for authentication.&lt;/p>
-&lt;p>The &lt;strong>info_file_path&lt;/strong> parameter of the function should include the full path and file name of the configuration file, while the &lt;strong>credentials_pw&lt;/strong> parameter should contain the credentials password. This password should be the same as the one used when issuing the credentials value in the info_file_path file. If no password was used, an empty value (&amp;quot;&amp;quot;) can be entered.&lt;/p>
-&lt;p>If the function is not called, the default read path is &lt;strong>&amp;quot;/var/tmp/.petra/petra_cipher_api.conf&amp;quot;&lt;/strong>, and no password is used.&lt;/p>
-&lt;p>For detailed information, please refer to the &amp;ldquo;Installation Guide - Configuration File&amp;rdquo; section.&lt;/p>
-&lt;h3 id="return-value">RETURN VALUE&lt;/h3>
-&lt;p>The function returns 0 upon success.&lt;/p>
-&lt;p>If an error occurs, it returns an error code less than 0.&lt;/p>
-&lt;h3 id="errors">ERRORS&lt;/h3>
-&lt;p>&lt;a href="../../../error-codes/#-30315">-30315&lt;/a>, &lt;a href="../../../error-codes/#-30316">-30316&lt;/a>, &lt;a href="../../../error-codes/#-30502">-30502&lt;/a>, &lt;a href="../../../error-codes/#-30511">-30511&lt;/a>&lt;/p>
-&lt;h3 id="note">NOTE&lt;/h3>
-&lt;div class="alert alert-primary" role="alert">
-Generally, the PcAPI_initialize() function uses the default path &amp;ldquo;/var/tmp/.petra/petra_cipher_api.conf&amp;rdquo; without being called if it is available. However, in exceptional cases where the system security solution or policy does not allow access to /var/tmp or a solution automatically deletes files under /var/tmp periodically, the function is used only in environments where it is difficult to use the /var/tmp path.
-&lt;/div></description></item><item><title>Docs: PcAPI_getSession → int</title><link>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-getsession/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-getsession/</guid><description>
-&lt;h3 id="synopsis">SYNOPSIS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;#34;PcAPIL.h&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#50fa7b">PcAPI_getSession&lt;/span>(&lt;span style="color:#ff79c6">const&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span>&lt;span style="color:#ff79c6">*&lt;/span> client_ip);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="description">DESCRIPTION&lt;/h3>
-&lt;p>The &lt;strong>PcAPI_getSession&lt;/strong> function converts the &lt;strong>client_ip&lt;/strong> passed as an argument into a hash string and uses it to find a session in the key server session pool. If an existing session exists, it returns the existing session, and if there is no session in the session pool, it creates a new session and returns a &lt;strong>signed 32-bit integer representing the session ID&lt;/strong>. The returned session ID is used for encryption/decryption.&lt;/p>
-&lt;p>In addition, the returned session ID can be used for logging and auditing purposes on the server-side. This enables audit tracking of encryption/decryption activities.&lt;/p>
-&lt;h3 id="return-value">RETURN VALUE&lt;/h3>
-&lt;p>The function returns a signed 32-bit integer representing the session ID upon success.&lt;/p>
-&lt;p>If an error occurs, it returns an error code less than 0.&lt;/p>
-&lt;h3 id="errors">ERRORS&lt;/h3>
-&lt;p>&lt;a href="../../../error-codes/#-30309">-30309&lt;/a>, &lt;a href="../../../error-codes/#-30310">-30310&lt;/a>, &lt;a href="../../../error-codes/#-30312">-30312&lt;/a>, &lt;a href="../../../error-codes/#-30315">-30315&lt;/a>, &lt;a href="../../../error-codes/#-30316">-30316&lt;/a>, &lt;a href="../../../error-codes/#-30340">-30340&lt;/a>, &lt;a href="../../../error-codes/#-30341">-30341&lt;/a>, &lt;a href="../../../error-codes/#-30342">-30342&lt;/a>, &lt;a href="../../../error-codes/#-30343">-30343&lt;/a>, &lt;a href="../../../error-codes/#-30344">-30344&lt;/a>&lt;/p></description></item><item><title>Docs: PcAPI_encrypt_name → int</title><link>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-encrypt-name/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-encrypt-name/</guid><description>
-&lt;h3 id="synopsis">SYNOPSIS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;#34;PcAPIL.h&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#50fa7b">PcAPI_encrypt_name&lt;/span>(
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> api_sid,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">const&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>enc_col_name,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>src,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> src_len,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>dst,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>dst_len
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="description">DESCRIPTION&lt;/h3>
-&lt;p>The &lt;strong>PcAPI_encrypt_name&lt;/strong> function takes in the encryption column name &lt;strong>enc_col_name&lt;/strong> generated by Petra Cipher Key Server and the source data &lt;strong>src&lt;/strong> to encrypt the source data using the specified encryption column. The &lt;strong>api_sid&lt;/strong> parameter should be passed with the session ID returned by calling the PcAPI_getSession function. The session ID is used for communication with Petra Cipher Key Server and is also used for access control to the desired key and user identification in audit data.&lt;/p>
-&lt;p>The function results in the encrypted data being stored in the &lt;strong>dst&lt;/strong> buffer and the length of the encrypted data being stored in the &lt;strong>dst_len&lt;/strong> parameter. The dst_len parameter should be at least as large as the size of the dst buffer and should be greater than or equal to src_len. Typically, the size of the dst buffer is about twice the size of the src buffer.&lt;/p>
-&lt;p>However, because the encrypted data in the dst buffer does not have a final value after executing the PcAPI_encrypt_name function, you need to either cut the data from dst by the length of dst_len to use it or indicate the end of the data by setting &lt;code>dst[dst_len] = '\0'&lt;/code> if you want to use the dst buffer directly.&lt;/p>
-&lt;h3 id="return-value">RETURN VALUE&lt;/h3>
-&lt;p>The function returns 0 upon success.&lt;/p>
-&lt;p>If an error occurs, it returns an error code less than 0.&lt;/p>
-&lt;h3 id="errors">ERRORS&lt;/h3>
-&lt;p>&lt;a href="../../../error-codes/#-30101">-30101&lt;/a>, &lt;a href="../../../error-codes/#-30103">-30103&lt;/a>, &lt;a href="../../../error-codes/#-30106">-30106&lt;/a>, &lt;a href="../../../error-codes/#-30115">-30115&lt;/a>, &lt;a href="../../../error-codes/#-30117">-30117&lt;/a>, &lt;a href="../../../error-codes/#-30301">-30301&lt;/a>, &lt;a href="../../../error-codes/#-30302">-30302&lt;/a>, &lt;a href="../../../error-codes/#-30351">-30351&lt;/a>, &lt;a href="../../../error-codes/#-30388">-30388&lt;/a>&lt;/p></description></item><item><title>Docs: PcAPI_decrypt_name → int</title><link>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-decrypt-name/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-decrypt-name/</guid><description>
-&lt;h3 id="synopsis">SYNOPSIS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">#include&lt;/span> &lt;span style="color:#ff79c6">&amp;#34;PcAPIL.h&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#50fa7b">PcAPI_decrypt_name&lt;/span>(
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> api_sid,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">const&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>enc_col_name,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>src,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">int&lt;/span> src_len,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">char&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>dst,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd">unsigned&lt;/span> &lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#ff79c6">*&lt;/span>dst_len
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="description">DESCRIPTION&lt;/h3>
-&lt;p>The &lt;strong>PcAPI_decrypt_name&lt;/strong> function takes the name of the encryption column created by the Petra Cipher Key Server &lt;strong>enc_col_name&lt;/strong> and the encrypted data &lt;strong>src&lt;/strong> as input, and provides the functionality to decrypt the original data using the corresponding encryption column. It is important to note that the &lt;strong>enc_col_name&lt;/strong> parameter must be identical to the name of the encryption column used in the encryption function PcAPI_encrypt_name, otherwise the decryption will fail.&lt;/p>
-&lt;p>The &lt;strong>api_sid&lt;/strong> parameter must be populated with the session ID returned by calling the &lt;strong>PcAPI_getSession&lt;/strong> function. The session ID is used for communication with the Petra Cipher Key Server and is also used for access control and user identification in audit data.&lt;/p>
-&lt;p>The function&amp;rsquo;s output is the decrypted data stored in the dst buffer, and the length of the decrypted data stored in the &lt;strong>dst_len&lt;/strong> parameter. &lt;strong>dst_len&lt;/strong> must be at least as large as the size of the &lt;strong>src buffer&lt;/strong>, and should be the same size as the dst buffer in most cases.&lt;/p>
-&lt;p>If the decryption is successful, the original data will be stored in the dst buffer and the length of the original data will be stored in the dst_len parameter. However, since the decrypted data does not have a null terminator at the end, if you want to use the dst buffer directly, you need to add a null terminator to the end of the data by setting &lt;code>dst[dst_len] = '\0'&lt;/code> or by truncating the dst buffer to dst_len bytes.&lt;/p>
-&lt;h3 id="return-value">RETURN VALUE&lt;/h3>
-&lt;p>The function returns 0 upon success.&lt;/p>
-&lt;p>If an error occurs, it returns an error code less than 0.&lt;/p>
-&lt;h3 id="errors">ERRORS&lt;/h3>
-&lt;p>&lt;a href="../../../error-codes/#-30101">-30101&lt;/a>, &lt;a href="../../../error-codes/#-30103">-30103&lt;/a>, &lt;a href="../../../error-codes/#-30105">-30105&lt;/a>, &lt;a href="../../../error-codes/#-30106">-30106&lt;/a>, &lt;a href="../../../error-codes/#-30107">-30107&lt;/a>, &lt;a href="../../../error-codes/#-30108">-30108&lt;/a>, &lt;a href="../../../error-codes/#-30111">-30111&lt;/a>, &lt;a href="../../../error-codes/#-30116">-30116&lt;/a>, &lt;a href="../../../error-codes/#-30117">-30117&lt;/a>, &lt;a href="../../../error-codes/#-30118">-30118&lt;/a>, &lt;a href="../../../error-codes/#-30302">-30302&lt;/a>, &lt;a href="../../../error-codes/#-30351">-30351&lt;/a>, &lt;a href="../../../error-codes/#-30388">-30388&lt;/a>, &lt;a href="../../../error-codes/#-30401">-30401&lt;/a>&lt;/p></description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sinsiway Docs – Methods</title>
+    <link>https://sinsiway-official.github.io/en/docs/c-cpp/methods/</link>
+    <description>Recent content in Methods on Sinsiway Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	  <atom:link href="https://sinsiway-official.github.io/en/docs/c-cpp/methods/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: PcAPI_initialize → void</title>
+      <link>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-initilize/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-initilize/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;PcAPIL.h&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;PcAPI_initialize&lt;/span&gt;(&lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;info_file_path, &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;credentials_pw);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;PcAPI_initialize&lt;/strong&gt; function sets up the configuration file required to use the &lt;strong&gt;libpcapi.so&lt;/strong&gt; library. The configuration file contains information such as the key management server settings and the credentials needed for authentication.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;info_file_path&lt;/strong&gt; parameter of the function should include the full path and file name of the configuration file, while the &lt;strong&gt;credentials_pw&lt;/strong&gt; parameter should contain the credentials password. This password should be the same as the one used when issuing the credentials value in the info_file_path file. If no password was used, an empty value (&amp;quot;&amp;quot;) can be entered.&lt;/p&gt;
+&lt;p&gt;If the function is not called, the default read path is &lt;strong&gt;&amp;quot;/var/tmp/.petra/petra_cipher_api.conf&amp;quot;&lt;/strong&gt;, and no password is used.&lt;/p&gt;
+&lt;p&gt;For detailed information, please refer to the &amp;ldquo;Installation Guide - Configuration File&amp;rdquo; section.&lt;/p&gt;
+&lt;h3 id=&#34;return-value&#34;&gt;RETURN VALUE&lt;/h3&gt;
+&lt;p&gt;The function returns 0 upon success.&lt;/p&gt;
+&lt;p&gt;If an error occurs, it returns an error code less than 0.&lt;/p&gt;
+&lt;h3 id=&#34;errors&#34;&gt;ERRORS&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;../../../error-codes/#-30315&#34;&gt;-30315&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30316&#34;&gt;-30316&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30502&#34;&gt;-30502&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30511&#34;&gt;-30511&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;note&#34;&gt;NOTE&lt;/h3&gt;
+
+
+&lt;div class=&#34;alert alert-primary&#34; role=&#34;alert&#34;&gt;
+
+
+    Generally, the PcAPI_initialize() function uses the default path &amp;ldquo;/var/tmp/.petra/petra_cipher_api.conf&amp;rdquo; without being called if it is available. However, in exceptional cases where the system security solution or policy does not allow access to /var/tmp or a solution automatically deletes files under /var/tmp periodically, the function is used only in environments where it is difficult to use the /var/tmp path.
+
+&lt;/div&gt;
+
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: PcAPI_getSession → int</title>
+      <link>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-getsession/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-getsession/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;PcAPIL.h&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;PcAPI_getSession&lt;/span&gt;(&lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt; client_ip);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;PcAPI_getSession&lt;/strong&gt; function converts the &lt;strong&gt;client_ip&lt;/strong&gt; passed as an argument into a hash string and uses it to find a session in the key server session pool. If an existing session exists, it returns the existing session, and if there is no session in the session pool, it creates a new session and returns a &lt;strong&gt;signed 32-bit integer representing the session ID&lt;/strong&gt;. The returned session ID is used for encryption/decryption.&lt;/p&gt;
+&lt;p&gt;In addition, the returned session ID can be used for logging and auditing purposes on the server-side. This enables audit tracking of encryption/decryption activities.&lt;/p&gt;
+&lt;h3 id=&#34;return-value&#34;&gt;RETURN VALUE&lt;/h3&gt;
+&lt;p&gt;The function returns a signed 32-bit integer representing the session ID upon success.&lt;/p&gt;
+&lt;p&gt;If an error occurs, it returns an error code less than 0.&lt;/p&gt;
+&lt;h3 id=&#34;errors&#34;&gt;ERRORS&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;../../../error-codes/#-30309&#34;&gt;-30309&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30310&#34;&gt;-30310&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30312&#34;&gt;-30312&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30315&#34;&gt;-30315&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30316&#34;&gt;-30316&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30340&#34;&gt;-30340&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30341&#34;&gt;-30341&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30342&#34;&gt;-30342&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30343&#34;&gt;-30343&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30344&#34;&gt;-30344&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: PcAPI_encrypt_name → int</title>
+      <link>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-encrypt-name/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-encrypt-name/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;PcAPIL.h&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;PcAPI_encrypt_name&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; api_sid,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;enc_col_name,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;src,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; src_len,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;dst,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;dst_len
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;PcAPI_encrypt_name&lt;/strong&gt; function takes in the encryption column name &lt;strong&gt;enc_col_name&lt;/strong&gt; generated by Petra Cipher Key Server and the source data &lt;strong&gt;src&lt;/strong&gt; to encrypt the source data using the specified encryption column. The &lt;strong&gt;api_sid&lt;/strong&gt; parameter should be passed with the session ID returned by calling the PcAPI_getSession function. The session ID is used for communication with Petra Cipher Key Server and is also used for access control to the desired key and user identification in audit data.&lt;/p&gt;
+&lt;p&gt;The function results in the encrypted data being stored in the &lt;strong&gt;dst&lt;/strong&gt; buffer and the length of the encrypted data being stored in the &lt;strong&gt;dst_len&lt;/strong&gt; parameter. The dst_len parameter should be at least as large as the size of the dst buffer and should be greater than or equal to src_len. Typically, the size of the dst buffer is about twice the size of the src buffer.&lt;/p&gt;
+&lt;p&gt;However, because the encrypted data in the dst buffer does not have a final value after executing the PcAPI_encrypt_name function, you need to either cut the data from dst by the length of dst_len to use it or indicate the end of the data by setting &lt;code&gt;dst[dst_len] = &#39;\0&#39;&lt;/code&gt; if you want to use the dst buffer directly.&lt;/p&gt;
+&lt;h3 id=&#34;return-value&#34;&gt;RETURN VALUE&lt;/h3&gt;
+&lt;p&gt;The function returns 0 upon success.&lt;/p&gt;
+&lt;p&gt;If an error occurs, it returns an error code less than 0.&lt;/p&gt;
+&lt;h3 id=&#34;errors&#34;&gt;ERRORS&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;../../../error-codes/#-30101&#34;&gt;-30101&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30103&#34;&gt;-30103&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30106&#34;&gt;-30106&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30115&#34;&gt;-30115&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30117&#34;&gt;-30117&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30301&#34;&gt;-30301&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30302&#34;&gt;-30302&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30351&#34;&gt;-30351&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30388&#34;&gt;-30388&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: PcAPI_decrypt_name → int</title>
+      <link>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-decrypt-name/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/en/docs/c-cpp/methods/c-api-pcapi-decrypt-name/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;&amp;#34;PcAPIL.h&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;PcAPI_decrypt_name&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; api_sid,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;enc_col_name,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;src,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; src_len,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;char&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;dst,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#8be9fd&#34;&gt;unsigned&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;*&lt;/span&gt;dst_len
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h3&gt;
+&lt;p&gt;The &lt;strong&gt;PcAPI_decrypt_name&lt;/strong&gt; function takes the name of the encryption column created by the Petra Cipher Key Server &lt;strong&gt;enc_col_name&lt;/strong&gt; and the encrypted data &lt;strong&gt;src&lt;/strong&gt; as input, and provides the functionality to decrypt the original data using the corresponding encryption column. It is important to note that the &lt;strong&gt;enc_col_name&lt;/strong&gt; parameter must be identical to the name of the encryption column used in the encryption function PcAPI_encrypt_name, otherwise the decryption will fail.&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;api_sid&lt;/strong&gt; parameter must be populated with the session ID returned by calling the &lt;strong&gt;PcAPI_getSession&lt;/strong&gt; function. The session ID is used for communication with the Petra Cipher Key Server and is also used for access control and user identification in audit data.&lt;/p&gt;
+&lt;p&gt;The function&amp;rsquo;s output is the decrypted data stored in the dst buffer, and the length of the decrypted data stored in the &lt;strong&gt;dst_len&lt;/strong&gt; parameter. &lt;strong&gt;dst_len&lt;/strong&gt; must be at least as large as the size of the &lt;strong&gt;src buffer&lt;/strong&gt;, and should be the same size as the dst buffer in most cases.&lt;/p&gt;
+&lt;p&gt;If the decryption is successful, the original data will be stored in the dst buffer and the length of the original data will be stored in the dst_len parameter. However, since the decrypted data does not have a null terminator at the end, if you want to use the dst buffer directly, you need to add a null terminator to the end of the data by setting &lt;code&gt;dst[dst_len] = &#39;\0&#39;&lt;/code&gt; or by truncating the dst buffer to dst_len bytes.&lt;/p&gt;
+&lt;h3 id=&#34;return-value&#34;&gt;RETURN VALUE&lt;/h3&gt;
+&lt;p&gt;The function returns 0 upon success.&lt;/p&gt;
+&lt;p&gt;If an error occurs, it returns an error code less than 0.&lt;/p&gt;
+&lt;h3 id=&#34;errors&#34;&gt;ERRORS&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;../../../error-codes/#-30101&#34;&gt;-30101&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30103&#34;&gt;-30103&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30105&#34;&gt;-30105&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30106&#34;&gt;-30106&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30107&#34;&gt;-30107&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30108&#34;&gt;-30108&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30111&#34;&gt;-30111&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30116&#34;&gt;-30116&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30117&#34;&gt;-30117&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30118&#34;&gt;-30118&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30302&#34;&gt;-30302&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30351&#34;&gt;-30351&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30388&#34;&gt;-30388&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30401&#34;&gt;-30401&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

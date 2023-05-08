@@ -1,25 +1,69 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Petra Cipher Docs – sinsiway.PcaSessionPool class</title><link>https://sinsiway-official.github.io/docs/java/classes/pca-session-pool/</link><description>Recent content in sinsiway.PcaSessionPool class on Petra Cipher Docs</description><generator>Hugo -- gohugo.io</generator><language>ko-KR</language><lastBuildDate>Fri, 21 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sinsiway-official.github.io/docs/java/classes/pca-session-pool/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: initialize() → static void</title><link>https://sinsiway-official.github.io/docs/java/classes/pca-session-pool/geterrcode/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/java/classes/pca-session-pool/geterrcode/</guid><description>
-&lt;h3 id="synopsis">SYNOPSIS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">public&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">static&lt;/span> &lt;span style="color:#8be9fd">void&lt;/span> &lt;span style="color:#50fa7b">initialize&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>String conf_file_path&lt;span style="color:#ff79c6">,&lt;/span> String credentials_password&lt;span style="color:#ff79c6">)&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">throws&lt;/span> PcaException
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="description">DESCRIPTION&lt;/h3>
-&lt;p>이 메소드는 세션 풀을 초기화하기 위한 구성 파일을 설정합니다. 구성 파일은 키 관리 서버 설정과 인증에 필요한 자격 증명 정보 등을 포함하고 있습니다.&lt;/p>
-&lt;p>함수의 conf_file_path 매개변수에는 구성 파일의 전체 경로와 파일명을 입력해야 하며, credentials_password 매개변수에는 자격 증명 비밀번호를 입력해야 합니다. 이 비밀번호는 conf_file_path 파일의 내용 중 credentials 값을 발급할 때 사용한 비밀번호와 동일해야 합니다. 만약 비밀번호를 사용하지 않았다면 빈 값(&amp;quot;&amp;quot;)을 입력하면 됩니다.&lt;/p>
-&lt;p>함수가 호출되지 않았을 때 기본적으로 읽어오는 경로는 &amp;ldquo;/var/tmp/.petra/petra_cipher_api.conf&amp;rdquo; 이며, 비밀번호는 사용되지 않습니다.
-자세한 정보는 &amp;ldquo;설치 가이드 - 구성 파일&amp;rdquo; 부분을 참고하시기 바랍니다.&lt;/p>
-&lt;p>만약 세션 풀 초기화에 실패하면 PcaException 예외를 throw 합니다. 이 예외는 &amp;ldquo;initialize failed. error code[에러코드]&amp;rdquo; 라는 메시지와 함께 던져집니다.&lt;/p>
-&lt;h3 id="return">RETURN&lt;/h3>
-&lt;p>void&lt;/p>
-&lt;h3 id="exception">EXCEPTION&lt;/h3>
-&lt;p>&lt;a href="../../../error-codes/#-30315">-30315&lt;/a>, &lt;a href="../../../error-codes/#-30316">-30316&lt;/a>, &lt;a href="../../../error-codes/#-30502">-30502&lt;/a>, &lt;a href="../../../error-codes/#-30511">-30511&lt;/a>&lt;/p></description></item><item><title>Docs: getSession() → static sinsiway.PcaSession</title><link>https://sinsiway-official.github.io/docs/java/classes/pca-session-pool/getsession/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/java/classes/pca-session-pool/getsession/</guid><description>
-&lt;h3 id="synopsis">SYNOPSIS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">public&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">static&lt;/span> sinsiway&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">PcaSession&lt;/span> &lt;span style="color:#50fa7b">getSession&lt;/span>&lt;span style="color:#ff79c6">()&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">throws&lt;/span> PcaException
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">public&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">static&lt;/span> sinsiway&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">PcaSession&lt;/span> &lt;span style="color:#50fa7b">getSession&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>String client_ip&lt;span style="color:#ff79c6">,&lt;/span> String user_id&lt;span style="color:#ff79c6">,&lt;/span> String client_program&lt;span style="color:#ff79c6">)&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">throws&lt;/span> PcaException
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="description">DESCRIPTION&lt;/h3>
-&lt;p>PcaSessionPool 클래스의 getSession() 함수는 Petra Cipher Key Server에서 인가된 키 데이터를 사용하여 암호화 및 복호화를 수행하는 PcaSession 객체를 반환하는 함수입니다.&lt;/p>
-&lt;p>이 함수는 client_ip, user_id, client_program을 매개변수로 받아 해당 정보를 사용하여 PcaSession 객체의 고유한 hash key를 생성합니다. 그리고 이 hash key를 사용하여 SessionPool에서 PcaSession 객체를 가져옵니다. 만약 SessionPool에서 PcaSession 객체를 찾지 못했다면, 새로운 PcaSession 객체를 생성하고 SessionPool에 추가하며, 이미 SessionPool에 PcaSession 객체가 존재한다면 해당 PcaSession 객체를 반환합니다.&lt;/p>
-&lt;p>getSession() 함수 내부에서 예외 상황이 발생하면, PcaException 객체를 던져서 예외 상황을 처리하며, 이를 통해 클라이언트에서 예외를 처리할 수 있도록 도와줍니다.&lt;/p>
-&lt;p>만약 특별히 권한 관리가 필요하지 않고 공유 세션을 위해 성능적인 부분에서 가장 많은 이점을 가지고 싶다면 매개변수가 없는 함수를 사용하여 모든 세션이 같은 세션을 공유하도록 사용할 수 있습니다.&lt;/p>
-&lt;h3 id="return">RETURN&lt;/h3>
-&lt;p>sinsiway.PcaSession 객체&lt;/p>
-&lt;h3 id="exception">EXCEPTION&lt;/h3>
-&lt;p>&lt;a href="../../../error-codes/#-30309">-30309&lt;/a>, &lt;a href="../../../error-codes/#-30310">-30310&lt;/a>, &lt;a href="../../../error-codes/#-30312">-30312&lt;/a>, &lt;a href="../../../error-codes/#-30315">-30315&lt;/a>, &lt;a href="../../../error-codes/#-30316">-30316&lt;/a>, &lt;a href="../../../error-codes/#-30340">-30340&lt;/a>, &lt;a href="../../../error-codes/#-30341">-30341&lt;/a>, &lt;a href="../../../error-codes/#-30342">-30342&lt;/a>, &lt;a href="../../../error-codes/#-30343">-30343&lt;/a>, &lt;a href="../../../error-codes/#-30344">-30344&lt;/a>&lt;/p></description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Petra Cipher Docs – sinsiway.PcaSessionPool class</title>
+    <link>https://sinsiway-official.github.io/docs/java/classes/pca-session-pool/</link>
+    <description>Recent content in sinsiway.PcaSessionPool class on Petra Cipher Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 21 Apr 2023 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://sinsiway-official.github.io/docs/java/classes/pca-session-pool/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: initialize() → static void</title>
+      <link>https://sinsiway-official.github.io/docs/java/classes/pca-session-pool/geterrcode/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/java/classes/pca-session-pool/geterrcode/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;initialize&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;String conf_file_path&lt;span style=&#34;color:#ff79c6&#34;&gt;,&lt;/span&gt; String credentials_password&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;throws&lt;/span&gt; PcaException
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h3&gt;
+&lt;p&gt;이 메소드는 세션 풀을 초기화하기 위한 구성 파일을 설정합니다. 구성 파일은 키 관리 서버 설정과 인증에 필요한 자격 증명 정보 등을 포함하고 있습니다.&lt;/p&gt;
+&lt;p&gt;함수의 conf_file_path 매개변수에는 구성 파일의 전체 경로와 파일명을 입력해야 하며, credentials_password 매개변수에는 자격 증명 비밀번호를 입력해야 합니다. 이 비밀번호는 conf_file_path 파일의 내용 중 credentials 값을 발급할 때 사용한 비밀번호와 동일해야 합니다. 만약 비밀번호를 사용하지 않았다면 빈 값(&amp;quot;&amp;quot;)을 입력하면 됩니다.&lt;/p&gt;
+&lt;p&gt;함수가 호출되지 않았을 때 기본적으로 읽어오는 경로는 &amp;ldquo;/var/tmp/.petra/petra_cipher_api.conf&amp;rdquo; 이며, 비밀번호는 사용되지 않습니다.
+자세한 정보는 &amp;ldquo;설치 가이드 - 구성 파일&amp;rdquo; 부분을 참고하시기 바랍니다.&lt;/p&gt;
+&lt;p&gt;만약 세션 풀 초기화에 실패하면 PcaException 예외를 throw 합니다. 이 예외는 &amp;ldquo;initialize failed. error code[에러코드]&amp;rdquo; 라는 메시지와 함께 던져집니다.&lt;/p&gt;
+&lt;h3 id=&#34;return&#34;&gt;RETURN&lt;/h3&gt;
+&lt;p&gt;void&lt;/p&gt;
+&lt;h3 id=&#34;exception&#34;&gt;EXCEPTION&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;../../../error-codes/#-30315&#34;&gt;-30315&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30316&#34;&gt;-30316&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30502&#34;&gt;-30502&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30511&#34;&gt;-30511&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: getSession() → static sinsiway.PcaSession</title>
+      <link>https://sinsiway-official.github.io/docs/java/classes/pca-session-pool/getsession/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/java/classes/pca-session-pool/getsession/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;static&lt;/span&gt; sinsiway&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;PcaSession&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;getSession&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;throws&lt;/span&gt; PcaException
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;static&lt;/span&gt; sinsiway&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;PcaSession&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;getSession&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;String client_ip&lt;span style=&#34;color:#ff79c6&#34;&gt;,&lt;/span&gt; String user_id&lt;span style=&#34;color:#ff79c6&#34;&gt;,&lt;/span&gt; String client_program&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;throws&lt;/span&gt; PcaException
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h3&gt;
+&lt;p&gt;PcaSessionPool 클래스의 getSession() 함수는 Petra Cipher Key Server에서 인가된 키 데이터를 사용하여 암호화 및 복호화를 수행하는 PcaSession 객체를 반환하는 함수입니다.&lt;/p&gt;
+&lt;p&gt;이 함수는 client_ip, user_id, client_program을 매개변수로 받아 해당 정보를 사용하여 PcaSession 객체의 고유한 hash key를 생성합니다. 그리고 이 hash key를 사용하여 SessionPool에서 PcaSession 객체를 가져옵니다. 만약 SessionPool에서 PcaSession 객체를 찾지 못했다면, 새로운 PcaSession 객체를 생성하고 SessionPool에 추가하며, 이미 SessionPool에 PcaSession 객체가 존재한다면 해당 PcaSession 객체를 반환합니다.&lt;/p&gt;
+&lt;p&gt;getSession() 함수 내부에서 예외 상황이 발생하면, PcaException 객체를 던져서 예외 상황을 처리하며, 이를 통해 클라이언트에서 예외를 처리할 수 있도록 도와줍니다.&lt;/p&gt;
+&lt;p&gt;만약 특별히 권한 관리가 필요하지 않고 공유 세션을 위해 성능적인 부분에서 가장 많은 이점을 가지고 싶다면 매개변수가 없는 함수를 사용하여 모든 세션이 같은 세션을 공유하도록 사용할 수 있습니다.&lt;/p&gt;
+&lt;h3 id=&#34;return&#34;&gt;RETURN&lt;/h3&gt;
+&lt;p&gt;sinsiway.PcaSession 객체&lt;/p&gt;
+&lt;h3 id=&#34;exception&#34;&gt;EXCEPTION&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;../../../error-codes/#-30309&#34;&gt;-30309&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30310&#34;&gt;-30310&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30312&#34;&gt;-30312&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30315&#34;&gt;-30315&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30316&#34;&gt;-30316&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30340&#34;&gt;-30340&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30341&#34;&gt;-30341&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30342&#34;&gt;-30342&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30343&#34;&gt;-30343&lt;/a&gt;, &lt;a href=&#34;../../../error-codes/#-30344&#34;&gt;-30344&lt;/a&gt;&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

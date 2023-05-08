@@ -1,7 +1,38 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Petra Cipher Docs – sinsiway.PcaException class</title><link>https://sinsiway-official.github.io/docs/java/classes/pca-exception/</link><description>Recent content in sinsiway.PcaException class on Petra Cipher Docs</description><generator>Hugo -- gohugo.io</generator><language>ko-KR</language><lastBuildDate>Fri, 21 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sinsiway-official.github.io/docs/java/classes/pca-exception/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: getErrCode() → int</title><link>https://sinsiway-official.github.io/docs/java/classes/pca-exception/geterrcode/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/java/classes/pca-exception/geterrcode/</guid><description>
-&lt;h3 id="synopsis">SYNOPSIS&lt;/h3>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">public&lt;/span> &lt;span style="color:#8be9fd">int&lt;/span> &lt;span style="color:#50fa7b">getErrCode&lt;/span>&lt;span style="color:#ff79c6">()&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="description">DESCRIPTION&lt;/h3>
-&lt;p>이 함수를 사용하여 &lt;strong>PcaException&lt;/strong>에서 발생한 에러 코드를 반환합니다. 함수가 의미하는 코드는 Petra Cipher API에서 발생한 &lt;strong>오류 코드&lt;/strong>입니다. 이 코드를 활용하여 암/복호화에서 발생할 수 있는 에러를 더 상세히 확인할 수 있습니다.&lt;/p>
-&lt;h3 id="return-value">RETURN VALUE&lt;/h3>
-&lt;p>PcaException 에서 발생한 에러 코드&lt;/p></description></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Petra Cipher Docs – sinsiway.PcaException class</title>
+    <link>https://sinsiway-official.github.io/docs/java/classes/pca-exception/</link>
+    <description>Recent content in sinsiway.PcaException class on Petra Cipher Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 21 Apr 2023 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://sinsiway-official.github.io/docs/java/classes/pca-exception/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: getErrCode() → int</title>
+      <link>https://sinsiway-official.github.io/docs/java/classes/pca-exception/geterrcode/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/java/classes/pca-exception/geterrcode/</guid>
+      <description>
+        
+        
+        &lt;h3 id=&#34;synopsis&#34;&gt;SYNOPSIS&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;getErrCode&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;description&#34;&gt;DESCRIPTION&lt;/h3&gt;
+&lt;p&gt;이 함수를 사용하여 &lt;strong&gt;PcaException&lt;/strong&gt;에서 발생한 에러 코드를 반환합니다. 함수가 의미하는 코드는 Petra Cipher API에서 발생한 &lt;strong&gt;오류 코드&lt;/strong&gt;입니다. 이 코드를 활용하여 암/복호화에서 발생할 수 있는 에러를 더 상세히 확인할 수 있습니다.&lt;/p&gt;
+&lt;h3 id=&#34;return-value&#34;&gt;RETURN VALUE&lt;/h3&gt;
+&lt;p&gt;PcaException 에서 발생한 에러 코드&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

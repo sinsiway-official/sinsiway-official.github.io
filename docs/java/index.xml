@@ -1,37 +1,94 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Petra Cipher Docs – JAVA</title><link>https://sinsiway-official.github.io/docs/java/</link><description>Recent content in JAVA on Petra Cipher Docs</description><generator>Hugo -- gohugo.io</generator><language>ko-KR</language><lastBuildDate>Fri, 21 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://sinsiway-official.github.io/docs/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Get Started</title><link>https://sinsiway-official.github.io/docs/java/get-started/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/java/get-started/</guid><description>
-&lt;p>&lt;strong>libpcjapi.so&lt;/strong> 라이브러리는 신시웨이가 개발한 &lt;strong>JAVA&lt;/strong> 암호화 네이티브 라이브러리입니다.&lt;/p>
-&lt;p>&lt;strong>PetraCipherAPI.jar&lt;/strong> 아카이브 파일에는 &lt;strong>PcaException&lt;/strong>, &lt;strong>PcaSessionPool&lt;/strong>, &lt;strong>PcaSession&lt;/strong> 클래스가 포함되어 있으며, 이들 클래스는 &lt;strong>sinsiway&lt;/strong> 패키지에 위치합니다.&lt;/p>
-&lt;p>아카이브 파일은 Java Native Interface (JNI)를 사용하여 &lt;strong>libpcjapi.so&lt;/strong> 네이티브 라이브러리를 로드하여 사용합니다. 이 네이티브 라이브러리는 Java 가상 머신(VM) 외부에서 실행됩니다.
-&lt;strong>PetraCipherAPI.jar&lt;/strong> 아카이브 파일에서는 네이티브 코드를 호출하기 위해 JNI 인터페이스를 사용합니다.&lt;/p>
-&lt;p>&lt;strong>libpcjapi.so&lt;/strong> 파일은 네이티브 코드를 포함하고 있으며, 네이티브 라이브러리 파일 형식으로 제공됩니다. 이 파일은 아카이브 파일에서 로드되어 자바 애플리케이션에서 사용됩니다. 네이티브 코드는 일반적으로 자바 코드로 구현하기 어려운 시스템 레벨 기능과 같은 것들을 처리하기 위해 사용됩니다.&lt;/p></description></item><item><title>Docs: Implementation</title><link>https://sinsiway-official.github.io/docs/java/implementation/</link><pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/java/implementation/</guid><description>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">import&lt;/span> sinsiway.*&lt;span style="color:#ff79c6">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8be9fd;font-style:italic">public&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">class&lt;/span> &lt;span style="color:#50fa7b">PetraCipher&lt;/span> &lt;span style="color:#ff79c6">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#8be9fd;font-style:italic">public&lt;/span> &lt;span style="color:#8be9fd;font-style:italic">static&lt;/span> &lt;span style="color:#8be9fd">void&lt;/span> &lt;span style="color:#50fa7b">main&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>String&lt;span style="color:#ff79c6">[]&lt;/span> args&lt;span style="color:#ff79c6">)&lt;/span> &lt;span style="color:#ff79c6">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">try&lt;/span> &lt;span style="color:#ff79c6">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> PcaSessionPool&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">initialize&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;/var/tmp/.petra/petra_cipher_api.conf&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">,&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34;&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> sinsiway&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">PcaSession&lt;/span> session &lt;span style="color:#ff79c6">=&lt;/span> sinsiway&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">PcaSessionPool&lt;/span>&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">getSession&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;127.0.0.1&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;petra&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">,&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;test source&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String encryptString &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">new&lt;/span> String&lt;span style="color:#ff79c6">();&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String decryptString &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">new&lt;/span> String&lt;span style="color:#ff79c6">();&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String keyName &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">new&lt;/span> String&lt;span style="color:#ff79c6">(&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;ARIA256&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> String plainString &lt;span style="color:#ff79c6">=&lt;/span> &lt;span style="color:#ff79c6">new&lt;/span> String&lt;span style="color:#ff79c6">(&lt;/span>&lt;span style="color:#f1fa8c">&amp;#34;Follow your heart.&amp;#34;&lt;/span>&lt;span style="color:#ff79c6">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> encryptString &lt;span style="color:#ff79c6">=&lt;/span> session&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">encrypt&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>keyNameOrg&lt;span style="color:#ff79c6">,&lt;/span> plainString&lt;span style="color:#ff79c6">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> decryptString &lt;span style="color:#ff79c6">=&lt;/span> session&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">decrypt&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>keyNameOrg&lt;span style="color:#ff79c6">,&lt;/span> encryptString&lt;span style="color:#ff79c6">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">}&lt;/span> &lt;span style="color:#ff79c6">catch&lt;/span> &lt;span style="color:#ff79c6">(&lt;/span>PcaException e&lt;span style="color:#ff79c6">)&lt;/span> &lt;span style="color:#ff79c6">{&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">out&lt;/span>&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">println&lt;/span>&lt;span style="color:#ff79c6">(&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#f1fa8c">&amp;#34;error_code = &amp;#34;&lt;/span> &lt;span style="color:#ff79c6">+&lt;/span> e&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">getErrCode&lt;/span>&lt;span style="color:#ff79c6">()&lt;/span> &lt;span style="color:#ff79c6">+&lt;/span> &lt;span style="color:#f1fa8c">&amp;#34; error_message = &amp;#34;&lt;/span> &lt;span style="color:#ff79c6">+&lt;/span> e&lt;span style="color:#ff79c6">.&lt;/span>&lt;span style="color:#50fa7b">getMessage&lt;/span>&lt;span style="color:#ff79c6">()&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">);&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">return&lt;/span>&lt;span style="color:#ff79c6">;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ff79c6">}&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#ff79c6">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>주어진 예제 소스 코드는 PetraCipher 라이브러리인 &lt;strong>libpcjapi.so&lt;/strong>를 사용하여 세션을 얻고 암호화/복호화 함수를 사용하는 방법을 보여주는 예시입니다.&lt;/p>
-&lt;p>소스 코드에서는 PcAPIL.h 헤더 파일을 사용하여 PetraCipher 라이브러리를 호출합니다. &lt;strong>PcaSessionPool 클래스의 getSession()&lt;/strong> 함수를 사용하여 &lt;strong>PcaSession&lt;/strong> 객체를 얻고, &lt;strong>PcaSession&lt;/strong> 클래스의 &lt;strong>encrypt()&lt;/strong> 및 &lt;strong>decrypt()&lt;/strong> 함수를 사용하여 데이터를 암호화하고 복호화합니다.&lt;/p>
-&lt;p>PetraCipher 라이브러리를 사용하려면 먼저 세션을 얻어야하며, 각 함수에서 암호화 키 이름, 평문 데이터 등을 매개변수로 전달해야합니다.&lt;/p>
-&lt;p>PetraCipher 라이브러리는 데이터 보호 및 안전한 통신을 위해 설계되었으며 다양한 애플리케이션에서 사용할 수 있습니다. 제공된 소스 코드는 라이브러리의 기본 사용법을 보여주며, 더 자세한 정보는 라이브러리의 문서에서 확인할 수 있습니다.&lt;/p></description></item><item><title>Docs: Classes</title><link>https://sinsiway-official.github.io/docs/java/classes/</link><pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate><guid>https://sinsiway-official.github.io/docs/java/classes/</guid><description/></item></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Petra Cipher Docs – JAVA</title>
+    <link>https://sinsiway-official.github.io/docs/java/</link>
+    <description>Recent content in JAVA on Petra Cipher Docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-KR</language>
+    <lastBuildDate>Fri, 21 Apr 2023 00:00:00 +0000</lastBuildDate>
+    
+	  <atom:link href="https://sinsiway-official.github.io/docs/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Get Started</title>
+      <link>https://sinsiway-official.github.io/docs/java/get-started/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/java/get-started/</guid>
+      <description>
+        
+        
+        &lt;p&gt;&lt;strong&gt;libpcjapi.so&lt;/strong&gt; 라이브러리는 신시웨이가 개발한 &lt;strong&gt;JAVA&lt;/strong&gt; 암호화 네이티브 라이브러리입니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;PetraCipherAPI.jar&lt;/strong&gt; 아카이브 파일에는 &lt;strong&gt;PcaException&lt;/strong&gt;, &lt;strong&gt;PcaSessionPool&lt;/strong&gt;, &lt;strong&gt;PcaSession&lt;/strong&gt; 클래스가 포함되어 있으며, 이들 클래스는 &lt;strong&gt;sinsiway&lt;/strong&gt; 패키지에 위치합니다.&lt;/p&gt;
+&lt;p&gt;아카이브 파일은 Java Native Interface (JNI)를 사용하여 &lt;strong&gt;libpcjapi.so&lt;/strong&gt; 네이티브 라이브러리를 로드하여 사용합니다. 이 네이티브 라이브러리는 Java 가상 머신(VM) 외부에서 실행됩니다.
+&lt;strong&gt;PetraCipherAPI.jar&lt;/strong&gt; 아카이브 파일에서는 네이티브 코드를 호출하기 위해 JNI 인터페이스를 사용합니다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;libpcjapi.so&lt;/strong&gt; 파일은 네이티브 코드를 포함하고 있으며, 네이티브 라이브러리 파일 형식으로 제공됩니다. 이 파일은 아카이브 파일에서 로드되어 자바 애플리케이션에서 사용됩니다. 네이티브 코드는 일반적으로 자바 코드로 구현하기 어려운 시스템 레벨 기능과 같은 것들을 처리하기 위해 사용됩니다.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Implementation</title>
+      <link>https://sinsiway-official.github.io/docs/java/implementation/</link>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/java/implementation/</guid>
+      <description>
+        
+        
+        &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;import&lt;/span&gt; sinsiway.*&lt;span style=&#34;color:#ff79c6&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;PetraCipher&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#8be9fd;font-style:italic&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#8be9fd&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#50fa7b&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#ff79c6&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;try&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      PcaSessionPool&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;initialize&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;/var/tmp/.petra/petra_cipher_api.conf&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      sinsiway&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;PcaSession&lt;/span&gt; session &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; sinsiway&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;PcaSessionPool&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;getSession&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;127.0.0.1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;petra&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;test source&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#ff79c6&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      String encryptString &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;new&lt;/span&gt; String&lt;span style=&#34;color:#ff79c6&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      String decryptString &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;new&lt;/span&gt; String&lt;span style=&#34;color:#ff79c6&#34;&gt;();&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      String keyName &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;new&lt;/span&gt; String&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;ARIA256&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      String plainString &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;new&lt;/span&gt; String&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Follow your heart.&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      encryptString &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; session&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;encrypt&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;keyNameOrg&lt;span style=&#34;color:#ff79c6&#34;&gt;,&lt;/span&gt; plainString&lt;span style=&#34;color:#ff79c6&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      decryptString &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; session&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;decrypt&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;keyNameOrg&lt;span style=&#34;color:#ff79c6&#34;&gt;,&lt;/span&gt; encryptString&lt;span style=&#34;color:#ff79c6&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;catch&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;PcaException e&lt;span style=&#34;color:#ff79c6&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      System&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;error_code = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt; e&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;getErrCode&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;  error_message = &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;+&lt;/span&gt; e&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#50fa7b&#34;&gt;getMessage&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;()&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#ff79c6&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      &lt;span style=&#34;color:#ff79c6&#34;&gt;return&lt;/span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#ff79c6&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#ff79c6&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;주어진 예제 소스 코드는 PetraCipher 라이브러리인 &lt;strong&gt;libpcjapi.so&lt;/strong&gt;를 사용하여 세션을 얻고 암호화/복호화 함수를 사용하는 방법을 보여주는 예시입니다.&lt;/p&gt;
+&lt;p&gt;소스 코드에서는 PcAPIL.h 헤더 파일을 사용하여 PetraCipher 라이브러리를 호출합니다. &lt;strong&gt;PcaSessionPool 클래스의 getSession()&lt;/strong&gt; 함수를 사용하여 &lt;strong&gt;PcaSession&lt;/strong&gt; 객체를 얻고, &lt;strong&gt;PcaSession&lt;/strong&gt; 클래스의 &lt;strong&gt;encrypt()&lt;/strong&gt; 및 &lt;strong&gt;decrypt()&lt;/strong&gt; 함수를 사용하여 데이터를 암호화하고 복호화합니다.&lt;/p&gt;
+&lt;p&gt;PetraCipher 라이브러리를 사용하려면 먼저 세션을 얻어야하며, 각 함수에서 암호화 키 이름, 평문 데이터 등을 매개변수로 전달해야합니다.&lt;/p&gt;
+&lt;p&gt;PetraCipher 라이브러리는 데이터 보호 및 안전한 통신을 위해 설계되었으며 다양한 애플리케이션에서 사용할 수 있습니다. 제공된 소스 코드는 라이브러리의 기본 사용법을 보여주며, 더 자세한 정보는 라이브러리의 문서에서 확인할 수 있습니다.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Classes</title>
+      <link>https://sinsiway-official.github.io/docs/java/classes/</link>
+      <pubDate>Fri, 21 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://sinsiway-official.github.io/docs/java/classes/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>
